@@ -1,0 +1,49 @@
+<ion-menu [content]="content" class="app-menu">
+  <ion-header style="background-color:#0400FF;color:white">
+    <ion-list style="background-color:#0400FF;color:white">
+      <ion-item style="background-color:#0400FF;color:white">
+        <ion-avatar item-left>
+          <img src="https://www.joshmorony.com/wp-content/uploads/2016/07/cloudo-screenshots.png">
+        </ion-avatar>
+        <h2>{{customer.customerName}}</h2>
+        <h3>{{customer.mobileNo}}</h3>
+      </ion-item>
+    </ion-list>
+    <!-- <ion-toolbar red>
+      <ion-title right>Menu</ion-title>
+    </ion-toolbar> -->
+  </ion-header>
+  <ion-content class="app-menu">
+    <ion-list>
+      <button ion-item (click)="openPage(HomePage)">
+        <ion-icon name="ios-home-outline"></ion-icon>&nbsp; &nbsp;Home
+      </button>
+      <button ion-item (click)="openPage(SettingsPage)">
+      <ion-icon name="ios-settings-outline"></ion-icon>&nbsp; &nbsp;Settings
+      </button>
+      <button ion-item (click)="openPage(ContactUsPage)">
+       <ion-icon name="ios-call-outline"></ion-icon>&nbsp; &nbsp;Contact Us
+      </button>
+      <button ion-item (click)="Logout()">
+    
+      <ion-icon name="ios-log-out"></ion-icon>&nbsp; &nbsp;Logout
+
+      </button>
+    </ion-list>
+    
+  </ion-content>
+<ion-footer>
+  <!-- <ion-segment [(ngModel)]="icons" color="secondary">
+    <ion-segment-button value="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+      <ion-icon name="bookmark"></ion-icon>
+    </ion-segment-button>
+  </ion-segment> -->
+  
+</ion-footer>
+
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
