@@ -10,6 +10,8 @@ import { HttpModule } from "@angular/http";
 import { CustomerProvider } from '../providers/customer/customer';
 import { BalacesPage } from "../pages/balaces/balaces";
 import { CustomerDetailsserviceProvider } from '../providers/customer-detailsservice/customer-detailsservice';
+import { TrimPipe } from '../commonFunctions/TrimPipe';
+import { AccontsDetailsServiceProvider } from '../providers/acconts-details-service/acconts-details-service';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { CustomerDetailsserviceProvider } from '../providers/customer-detailsser
     MyApp,
     HomePage,
     LoginPage,
-    BalacesPage
+    BalacesPage,
+    TrimPipe,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { CustomerDetailsserviceProvider } from '../providers/customer-detailsser
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CustomerProvider,
     CustomerDetailsserviceProvider,
+    AccontsDetailsServiceProvider,
    
   ]
 })

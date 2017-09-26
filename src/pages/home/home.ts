@@ -14,9 +14,11 @@ export interface PageInterface {
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [CustomerDetailsserviceProvider]
+  providers: [CustomerDetailsserviceProvider],
+ 
 })
 export class HomePage {
+  
   private customer: Customer;
   constructor(public loadingCtrl: LoadingController, public events: Events,customerDetPro: CustomerDetailsserviceProvider, public navCtrl: NavController, public menutrl: MenuController, public navParams: NavParams) {
     var userId = this.navParams.get('userId');
@@ -27,7 +29,6 @@ let loader = this.loadingCtrl.create({
   
     customerDetPro.getCustumerDetails(userId).subscribe(data => {
      this.customer = data;
-     
      this.events.publish("userLogedIn",this.customer);
       loader.dismiss();
     });
