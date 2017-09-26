@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { AccountDetail } from '../../models/accountDetails';
 
 /**
  * Generated class for the BalancesDetailsPage page.
@@ -12,14 +13,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-balances-details',
   templateUrl: 'balances-details.html',
+  providers: []
 })
 export class BalancesDetailsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public accountDetails: AccountDetail[] = [];
+  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
+    this.accountDetails = this.navParams.get('accountDetails');
+    console.log("accountDetails passed",this.accountDetails.length )
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad BalancesDetailsPage');
   }
-
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
 }

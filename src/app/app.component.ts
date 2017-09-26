@@ -7,8 +7,6 @@ import { HomePage } from "../pages/home/home";
 import { CustomerDetailsserviceProvider } from "../providers/customer-detailsservice/customer-detailsservice";
 import { Customer } from "../models/customer";
 import { Events } from 'ionic-angular';
-//import { TrimPipe } from "../commonFunctions/TrimPipe";
-import { TrimPipe } from "../commonFunctions/TrimPipe";
 @Component({
   templateUrl: 'app.html',
   // providers:[ CustomerDetailsserviceProvider]

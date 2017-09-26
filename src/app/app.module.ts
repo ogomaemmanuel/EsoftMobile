@@ -11,8 +11,9 @@ import { CustomerProvider } from '../providers/customer/customer';
 import { BalacesPage } from "../pages/balaces/balaces";
 import { CustomerDetailsserviceProvider } from '../providers/customer-detailsservice/customer-detailsservice';
 import { TrimPipe } from '../commonFunctions/TrimPipe';
-import { AccontsDetailsServiceProvider } from '../providers/acconts-details-service/acconts-details-service';
-
+import { AccountsDetailsServiceProvider } from '../providers/acconts-details-service/acconts-details-service';
+import { IonicStorageModule } from '@ionic/storage';
+import { BalancesDetailsPage } from '../pages/balances-details/balances-details';
 
 @NgModule({
   declarations: [
@@ -21,18 +22,24 @@ import { AccontsDetailsServiceProvider } from '../providers/acconts-details-serv
     LoginPage,
     BalacesPage,
     TrimPipe,
+    BalancesDetailsPage,
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     LoginPage,
-    BalacesPage
+    BalacesPage,
+    BalancesDetailsPage,
     
   ],
   providers: [
@@ -41,7 +48,7 @@ import { AccontsDetailsServiceProvider } from '../providers/acconts-details-serv
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CustomerProvider,
     CustomerDetailsserviceProvider,
-    AccontsDetailsServiceProvider,
+    AccountsDetailsServiceProvider,
    
   ]
 })

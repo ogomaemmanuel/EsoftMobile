@@ -4,6 +4,7 @@ import { BalacesPage } from "../balaces/balaces";
 import { Customer } from "../../models/customer";
 import { CustomerDetailsserviceProvider } from "../../providers/customer-detailsservice/customer-detailsservice";
 import { Events, AlertController, LoadingController } from 'ionic-angular';
+import {Storage} from '@ionic/storage';
 export interface PageInterface {
   title: string;
   pageName: string;
@@ -20,7 +21,7 @@ export interface PageInterface {
 export class HomePage {
   
   private customer: Customer;
-  constructor(public loadingCtrl: LoadingController, public events: Events,customerDetPro: CustomerDetailsserviceProvider, public navCtrl: NavController, public menutrl: MenuController, public navParams: NavParams) {
+  constructor(public storage:Storage, public loadingCtrl: LoadingController, public events: Events,customerDetPro: CustomerDetailsserviceProvider, public navCtrl: NavController, public menutrl: MenuController, public navParams: NavParams) {
     var userId = this.navParams.get('userId');
 let loader = this.loadingCtrl.create({
       content: "Please wait...",
@@ -29,10 +30,13 @@ let loader = this.loadingCtrl.create({
   
     customerDetPro.getCustumerDetails(userId).subscribe(data => {
      this.customer = data;
+     this.storage.set("customerDetails",JSON.stringify(this.customer))
      this.events.publish("userLogedIn",this.customer);
-      loader.dismiss();
+     loader.dismiss();
     });
   }
+
+  
 
   goToBalance() {
     this.navCtrl.setRoot(BalacesPage);
