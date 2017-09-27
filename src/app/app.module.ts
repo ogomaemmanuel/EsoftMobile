@@ -14,6 +14,8 @@ import { TrimPipe } from '../commonFunctions/TrimPipe';
 import { AccountsDetailsServiceProvider } from '../providers/acconts-details-service/acconts-details-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { BalancesDetailsPage } from '../pages/balances-details/balances-details';
+import { MinistatementProvider } from '../providers/ministatement/ministatement';
+import { MinistatementMenuPage } from '../pages/ministatement-menu/ministatement-menu';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { BalancesDetailsPage } from '../pages/balances-details/balances-details'
     BalacesPage,
     TrimPipe,
     BalancesDetailsPage,
+    MinistatementMenuPage
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { BalancesDetailsPage } from '../pages/balances-details/balances-details'
     LoginPage,
     BalacesPage,
     BalancesDetailsPage,
+    MinistatementMenuPage
     
   ],
   providers: [
@@ -49,6 +53,7 @@ import { BalancesDetailsPage } from '../pages/balances-details/balances-details'
     CustomerProvider,
     CustomerDetailsserviceProvider,
     AccountsDetailsServiceProvider,
+    MinistatementProvider,
    
   ]
 })

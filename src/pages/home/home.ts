@@ -1,10 +1,11 @@
-import { Component ,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { BalacesPage } from "../balaces/balaces";
 import { Customer } from "../../models/customer";
 import { CustomerDetailsserviceProvider } from "../../providers/customer-detailsservice/customer-detailsservice";
 import { Events, AlertController, LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { MinistatementMenuPage } from '../ministatement-menu/ministatement-menu';
 export interface PageInterface {
   title: string;
   pageName: string;
@@ -45,6 +46,8 @@ export class HomePage implements OnInit {
     this.navCtrl.setRoot(BalacesPage);
 
   }
-
+  goToMiniStatementMenu() {
+    this.navCtrl.setRoot(MinistatementMenuPage);
+  }
 
 }
