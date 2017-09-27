@@ -12,23 +12,30 @@ import { AccountDetail } from '../../models/accountDetails';
 */
 @Injectable()
 export class AccountsDetailsServiceProvider {
-
+endPoint:string="http://localhost:53725/customers/";
   constructor(public storage: Storage, public http: Http) {
     console.log('Hello AccontsDetailsServiceProvider Provider');
   }
 
-  public getSavingsAccountDetails() {
-    var  storedDataId="";
-     this.storage.get("customerDetails").then(data=>{
-      storedDataId=data;
-    });
-  return  this.http.get("http://localhost:53725/customers/"+storedDataId+"/savings").do(data => {
+  public getSavingsAccountDetails(id: string) {
+    return this.http.get(this.endPoint + id + "/savings").do(data => {
       data.json();
       console.log("accounts data" + data);
-      //let modal = this.modalCtrl.create(BalancesDetailsPage, { accountDetails: this.accountDetails });
-      //modal.present()
-    }).map(res=>res.json());
+    }).map(res => res.json());
+  }
 
+  public getLoansAccountDetails(id: string) {
+    return this.http.get(this.endPoint + id + "/loans").do(data => {
+      data.json();
+      console.log("accounts data" + data);
+    }).map(res => res.json());
+  }
+
+  public getSharesAccountDetails(id: string) {
+    return this.http.get(this.endPoint + id + "/shares").do(data => {
+      data.json();
+      console.log("accounts data" + data);
+    }).map(res => res.json());
   }
 }
 

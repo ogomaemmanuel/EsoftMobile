@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { AccountDetail } from '../../models/accountDetails';
 
@@ -15,12 +15,18 @@ import { AccountDetail } from '../../models/accountDetails';
   templateUrl: 'balances-details.html',
   providers: []
 })
-export class BalancesDetailsPage {
+export class BalancesDetailsPage implements OnInit {
   public accountDetails: AccountDetail[] = [];
+  public title: string = "";
   constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
-    this.accountDetails = this.navParams.get('accountDetails');
-    console.log("accountDetails passed",this.accountDetails.length )
+
   }
+  ngOnInit(): void {
+    this.accountDetails = this.navParams.get('accountDetails');
+    this.title = this.navParams.get('modalTitle');
+    console.log("Modal Title",this.navParams.get('modalTitle'));
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad BalancesDetailsPage');
   }
