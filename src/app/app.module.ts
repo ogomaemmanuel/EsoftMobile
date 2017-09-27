@@ -16,6 +16,8 @@ import { IonicStorageModule } from '@ionic/storage';
 import { BalancesDetailsPage } from '../pages/balances-details/balances-details';
 import { MinistatementProvider } from '../providers/ministatement/ministatement';
 import { MinistatementMenuPage } from '../pages/ministatement-menu/ministatement-menu';
+import { MinistatementAccountsPage } from '../pages/ministatement-accounts/ministatement-accounts';
+import { MinistatementPage } from '../pages/ministatement/ministatement';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MinistatementMenuPage } from '../pages/ministatement-menu/ministatement
     BalacesPage,
     TrimPipe,
     BalancesDetailsPage,
-    MinistatementMenuPage
+    MinistatementMenuPage,
+    MinistatementAccountsPage,
+    MinistatementPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ import { MinistatementMenuPage } from '../pages/ministatement-menu/ministatement
     LoginPage,
     BalacesPage,
     BalancesDetailsPage,
-    MinistatementMenuPage
+    MinistatementMenuPage,
+    MinistatementAccountsPage,
+    MinistatementPage,
     
   ],
   providers: [

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,11 +13,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-ministatement',
   templateUrl: 'ministatement.html',
 })
-export class MinistatementPage {
-
+export class MinistatementPage implements OnInit {
+  public ministatements: any=[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  ngOnInit(): void {
+    this.ministatements = this.navParams.get("ministatements");
+    console.log("these are the statements", this.ministatements);
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MinistatementPage');
   }

@@ -1,35 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      Account Balances
-    </ion-title>
+    <ion-title>Account Statements</ion-title>
   </ion-navbar>
-  <!-- <ion-searchbar
-  [showCancelButton]="shouldShowCancel"
-  (ionInput)="onInput($event)"
-  (ionCancel)="onCancel($event)">
-</ion-searchbar> -->
 </ion-header>
 
-
 <ion-content>
-
- 
-
   <ion-list list-ios>
-    <button ion-item (click)="getSavingsBalances()">
-      Savings
+    <button ion-item (click)="getSavingAccounts()">
+      Savings Accounts
     </button>
-    <button ion-item (click)="getLoanBalances()">
-      Loans
+    <button ion-item (click)="getLoanAccounts()">
+      Loans Accounts
     </button>
-    <button ion-item (click)="getShareBalances()">
-      Shares
+    <button ion-item (click)="getSharesAccounts()">
+      Shares Accounts
     </button>
   </ion-list>
-</ion-content>
-<ion-content padding>
 </ion-content>

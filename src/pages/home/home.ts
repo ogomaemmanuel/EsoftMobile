@@ -43,11 +43,11 @@ export class HomePage implements OnInit {
   }
 
   goToBalance() {
-    this.navCtrl.setRoot(BalacesPage);
+    this.navCtrl.push(BalacesPage);
 
   }
   goToMiniStatementMenu() {
-    this.navCtrl.setRoot(MinistatementMenuPage);
+    this.navCtrl.push(MinistatementMenuPage);
   }
 
 }

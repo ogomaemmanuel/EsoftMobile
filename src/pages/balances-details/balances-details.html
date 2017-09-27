@@ -15,9 +15,9 @@
 <ion-content>
   <ion-list>
       <ion-item *ngFor="let accountDetail of accountDetails">
-        {{accountDetail.accountName|trim}}
+        {{accountDetail.accountName|trim|titlecase}}
         <ion-note item-end>
-          {{accountDetail.accountBalance}}
+          {{accountDetail.accountBalance|currency:'ksh':true}}
         </ion-note>
       </ion-item>
   </ion-list>
