@@ -7,6 +7,8 @@ import { HomePage } from "../pages/home/home";
 import { CustomerDetailsserviceProvider } from "../providers/customer-detailsservice/customer-detailsservice";
 import { Customer } from "../models/customer";
 import { Events } from 'ionic-angular';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+
 @Component({
   templateUrl: 'app.html',
   // providers:[ CustomerDetailsserviceProvider]
@@ -35,6 +37,10 @@ export class MyApp {
   }
   openPageHomePage(){
     this.nav.setRoot(HomePage);    
+  }
+  
+  openContactUsPage(){
+    this.nav.push(ContactUsPage);    
   }
 }
 
