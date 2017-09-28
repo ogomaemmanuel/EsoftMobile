@@ -20,7 +20,7 @@ export class UserAuthProvider {
     console.log('Hello UserAuthProvider Provider');
   }
 public authenticateUser(password:string,telephone:string){
-  if(password=="1234" && telephone=="1234"){
+  if(password=="1234" && telephone=="0721382381"){
     this.navController.setRoot(HomePage,{userId:this.userId})
   }
   else{

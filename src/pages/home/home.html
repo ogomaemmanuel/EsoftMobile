@@ -14,9 +14,9 @@
 </ion-searchbar> -->
 </ion-header>
 
-<ion-content >
+<ion-content>
   <ion-grid>
-    <ion-row>
+    <!-- <ion-row>
       <ion-col col-6 (click)="goToBalance()">
         <ion-card> 
           <img src="assets/images/us6K36jPS8FuKvuvMjGf_userprofile.png"  style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto; " />
@@ -34,38 +34,43 @@
           </ion-card-header>
         </ion-card>
       </ion-col>
-     </ion-row>
+     </ion-row> -->
 
     <ion-row>
       <ion-col col-6 (click)="goToBalance()">
-        <ion-card> 
-          <img src="assets/images/o23OlcgsRu2IujBx4LSk_transferfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />
-          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                    
-              Check Balances
+        <ion-card>
+          <img src="assets/images/o23OlcgsRu2IujBx4LSk_transferfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"
+          />
+          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">
+            Check Balances
           </ion-card-header>
         </ion-card>
       </ion-col>
 
       <ion-col col-6 (click)="goToMiniStatementMenu()">
-        <ion-card> 
-          <img src="assets/images/6SOe72BFQmz3hXCgKM7Y_ministatement.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />
-          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                   
-              Mini Statements
+        <ion-card>
+          <img src="assets/images/6SOe72BFQmz3hXCgKM7Y_ministatement.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"
+          />
+          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">
+            Mini Statements
           </ion-card-header>
         </ion-card>
       </ion-col>
-     </ion-row>
+    </ion-row>
 
-     <ion-row>
-      <ion-col col-6 (click)="goToBalance()">
-        <ion-card> 
-          <img src="assets/images/ZqX8xkz9RkedgYxBCdHS_withdrawfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />
-          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                      
-              Linked Cards           
+    <ion-row>
+      <ion-col col-6 (click)="goToAtmCards()">
+        <ion-card>
+          <img src="assets/images/ZqX8xkz9RkedgYxBCdHS_withdrawfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"
+          />
+          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">
+            Linked Cards
           </ion-card-header>
         </ion-card>
       </ion-col>
 
+
+      <!--
       <ion-col col-6 (click)="goToMiniStatementMenu()">
         <ion-card> 
           <img src="assets/images/VWCZHeiSR67BlPhrKNP3_Loans.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />
@@ -73,9 +78,10 @@
               Loans           
           </ion-card-header>
         </ion-card>
-      </ion-col>
-     </ion-row>
-
+      </ion-col> 
+    -->
+    </ion-row>
+    <!-- 
      <ion-row>
        <ion-col col-3></ion-col>
       <ion-col col-6 (click)="goToBalance()">
@@ -87,7 +93,7 @@
         </ion-card>
       </ion-col>
        <ion-col col-3></ion-col>
-     </ion-row>
-    </ion-grid>
+     </ion-row> -->
+  </ion-grid>
 
 </ion-content>

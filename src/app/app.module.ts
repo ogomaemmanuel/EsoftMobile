@@ -18,6 +18,8 @@ import { MinistatementProvider } from '../providers/ministatement/ministatement'
 import { MinistatementMenuPage } from '../pages/ministatement-menu/ministatement-menu';
 import { MinistatementAccountsPage } from '../pages/ministatement-accounts/ministatement-accounts';
 import { MinistatementPage } from '../pages/ministatement/ministatement';
+import { AtmCardsProvider } from '../providers/atm-cards/atm-cards';
+import { AtmCardsPage } from '../pages/atm-cards/atm-cards';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { MinistatementPage } from '../pages/ministatement/ministatement';
     BalancesDetailsPage,
     MinistatementMenuPage,
     MinistatementAccountsPage,
-    MinistatementPage
+    MinistatementPage,
+    AtmCardsPage
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { MinistatementPage } from '../pages/ministatement/ministatement';
     MinistatementMenuPage,
     MinistatementAccountsPage,
     MinistatementPage,
+    AtmCardsPage
     
   ],
   providers: [
@@ -60,6 +64,7 @@ import { MinistatementPage } from '../pages/ministatement/ministatement';
     CustomerDetailsserviceProvider,
     AccountsDetailsServiceProvider,
     MinistatementProvider,
+    AtmCardsProvider,
    
   ]
 })

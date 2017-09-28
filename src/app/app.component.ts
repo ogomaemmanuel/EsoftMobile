@@ -33,5 +33,8 @@ export class MyApp {
       this.customer = data;
     });
   }
+  openPageHomePage(){
+    this.nav.setRoot(HomePage);    
+  }
 }
 

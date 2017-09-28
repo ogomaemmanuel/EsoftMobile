@@ -6,6 +6,7 @@ import { CustomerDetailsserviceProvider } from "../../providers/customer-details
 import { Events, AlertController, LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { MinistatementMenuPage } from '../ministatement-menu/ministatement-menu';
+import { AtmCardsPage } from '../atm-cards/atm-cards';
 export interface PageInterface {
   title: string;
   pageName: string;
@@ -48,6 +49,10 @@ export class HomePage implements OnInit {
   }
   goToMiniStatementMenu() {
     this.navCtrl.push(MinistatementMenuPage);
+  }
+
+  goToAtmCards(){
+    this.navCtrl.push(AtmCardsPage);
   }
 
 }
