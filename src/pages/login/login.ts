@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {Platform} from 'ionic-angular';
+import { Platform } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserAuthProvider } from '../../providers/user-auth/user-auth';
 import { AlertController, MenuController } from 'ionic-angular';
-import {Http} from '@angular/http';
+import { Http } from '@angular/http';
 
 /**
  * Generated class for the LoginPage page.
@@ -16,27 +16,36 @@ import {Http} from '@angular/http';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
-  providers:[UserAuthProvider]
+  providers: [UserAuthProvider]
 })
 export class LoginPage {
   public telephone: string;
   public pin: string;
-  
 
-  constructor(public menuCtrl: MenuController,public userAuthProvider: UserAuthProvider, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
-    
-    this.menuCtrl.enable(false, 'app-menu');
+
+  constructor(public menuCtrl: MenuController, public userAuthProvider: UserAuthProvider, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
 
   }
+  ionViewWillEnter() {
+
+    this.menuCtrl.swipeEnable(false)
+  }
+
+  ionViewDidLeave() {
+
+    this.menuCtrl.swipeEnable(true)
+  }
   authenticate() {
-   
+
     //1) Validate the user
     //2) If valid redirect to home.
-    this.userAuthProvider.authenticateUser(this.pin,this.telephone);
-   
+    this.userAuthProvider.authenticateUser(this.pin, this.telephone);
+
   }
 }
