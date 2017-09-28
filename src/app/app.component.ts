@@ -6,7 +6,7 @@ import { LoginPage } from '../pages/login/login'
 import { HomePage } from "../pages/home/home";
 import { CustomerDetailsserviceProvider } from "../providers/customer-detailsservice/customer-detailsservice";
 import { Customer } from "../models/customer";
-import { Events } from 'ionic-angular';
+import { Events, MenuController } from 'ionic-angular';
 @Component({
   templateUrl: 'app.html',
   // providers:[ CustomerDetailsserviceProvider]
@@ -17,7 +17,7 @@ export class MyApp {
   rootPage: any = LoginPage;
   @ViewChild(Nav) nav: Nav;
   pages: Array<{ title: string, component: any }>;
-  constructor(public events: Events, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(public menuCtrl: MenuController,public events: Events, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -25,6 +25,7 @@ export class MyApp {
       splashScreen.hide();
 
     });
+    this.menuCtrl.swipeEnable(false)
     this.pages = [
       { title: 'Home', component: HomePage },
 

@@ -17,14 +17,14 @@
 
 
   <ion-list>
-    <ion-card *ngFor="let atmCard of atmCards">
-      <img src="http://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png" />
+    <ion-card *ngFor="let atmCard of atmCards;let idx = index">
+      <img src="assets/images/credit-card.png" />
       <ion-card-content>
         <ion-card-title>
           <p style="font-size: 16px;">Account: {{ atmCard.accountNo|trim}}</p>
         <hr/>
         </ion-card-title>
-        <p>{{ atmCard.enabled==1?"Block Card:":"Unblock Card:"}}<span><ion-toggle toggle-ios-background-color-on checked="{{atmCard.enabled==1}}"></ion-toggle></span></p>
+        <p>{{atmCard.enabled===1?"Block Card:":"Atm Card Blocked"}}<span><ion-toggle toggle-ios-background-color-on disabled="{{atmCard.enabled!==1}}" checked="{{atmCard.enabled===1}}" (ionChange)="blockAtmCard(atmCard.tbl_LinkedAtmCardsID,idx)"></ion-toggle></span></p>
         <p>Card Number {{ atmCard.cardNumber|trim}}</p>
         <p>Branch {{ atmCard.branch|trim}}</p>
         <p>Date Linked {{ atmCard.dateLinked|trim|date:'medium'}}</p>

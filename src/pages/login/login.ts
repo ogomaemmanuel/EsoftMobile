@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {Platform} from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserAuthProvider } from '../../providers/user-auth/user-auth';
-import { AlertController } from 'ionic-angular';
+import { AlertController, MenuController } from 'ionic-angular';
 import {Http} from '@angular/http';
 
 /**
@@ -23,9 +23,9 @@ export class LoginPage {
   public pin: string;
   
 
-  constructor(public userAuthProvider: UserAuthProvider, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public menuCtrl: MenuController,public userAuthProvider: UserAuthProvider, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     
-   
+    this.menuCtrl.enable(false, 'app-menu');
   }
 
   ionViewDidLoad() {

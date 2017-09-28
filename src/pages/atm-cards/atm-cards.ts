@@ -17,12 +17,12 @@ import { CustomerProvider } from '../../providers/customer/customer';
   providers: [AtmCardsProvider, CustomerProvider]
 })
 export class AtmCardsPage implements OnInit {
- 
+  atmCardImagePath: string = "assets/images/credit-card.png";
   atmCards: any = []
   constructor(public customerProvider: CustomerProvider,
-     public atmCardsProvider: AtmCardsProvider, 
-     public navCtrl: NavController, 
-     public navParams: NavParams) {
+    public atmCardsProvider: AtmCardsProvider,
+    public navCtrl: NavController,
+    public navParams: NavParams) {
   }
   ngOnInit(): void {
     this.getAtmCards();
@@ -36,5 +36,18 @@ export class AtmCardsPage implements OnInit {
         this.atmCards = atmCards;
       })
     })
+  }
+
+  blockAtmCard(atmCardId: string, cardIndex: number) {
+    console.log("cardIndex is", cardIndex);
+
+    this.customerProvider.getLocallyStoredUserId().then(userId => {
+      this.atmCardsProvider.blockAtmCard(atmCardId, userId).subscribe(result => {
+        if (!result) {
+          this.atmCards[cardIndex].enabled = 0;
+        }
+      })
+    });
+
   }
 }

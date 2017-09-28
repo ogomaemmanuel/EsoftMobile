@@ -11,10 +11,17 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AtmCardsProvider {
   endPoint: string = "http://localhost:53725/customers/";
+  atmCardEndPoint:string="http://localhost:53725/"
   constructor(public http: Http) {
     console.log('Hello AtmCardsProvider Provider');
   }
   public getAtMCards(id: string) {
     return this.http.get(this.endPoint + id + "/atm-cards").map(resp => resp.json());
+  }
+
+  public blockAtmCard(cardId: string,customerId:string) {
+    return this.http.put(this.atmCardEndPoint+"AtmCards/block?id="+cardId+"&customerId="+customerId, {})
+    .map(resp => resp.json());
+    
   }
 }
