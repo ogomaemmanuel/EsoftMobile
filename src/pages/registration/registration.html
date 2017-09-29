@@ -11,33 +11,33 @@
 </ion-header>
 <ion-content padding>
 
-  <ion-list>
+    <form class="list" [formGroup]="registrationModelFormGroup" (ngSubmit)="submit()">
 
     <ion-item>
       <ion-label floating>Phone No</ion-label>
-      <ion-input type="text" [(ngModel)]="registrationModel.mobileNo"></ion-input>
+      <ion-input type="text" formControlName="mobileNo"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Full Name</ion-label>
-      <ion-input type="password" [(ngModel)]="registrationModel.customerName"></ion-input>
+      <ion-input type="text" formControlName="customerName"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label floating>Id No</ion-label>
-        <ion-input type="password" [(ngModel)]="registrationModel.idNo"></ion-input>
+        <ion-input type="text" formControlName="idNo"></ion-input>
       </ion-item>
-
+          <!-- <span padding style="text-align: center" ion-text color="danger" *ngIf="!registrationModelFormGroup.controls.idNo.valid  && (registrationModelFormGroup.controls.idNo.dirty && submitAttempt)">Please enter a valid id No.</span> -->
       <ion-item>
           <ion-label floating>Member No</ion-label>
-          <ion-input type="password" [(ngModel)]="registrationModel.customerNo"></ion-input>
+          <ion-input type="text" formControlName="customerNo"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Email</ion-label>
-            <ion-input type="password" [(ngModel)]="registrationModel.email"></ion-input>
+            <ion-input type="text" formControlName="email"></ion-input>
           </ion-item>
 
-  </ion-list>
+        </form>
 
   <div padding>
       <button ion-button block (click)="registerUser()">Register</button>

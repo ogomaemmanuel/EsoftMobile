@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http,Headers, RequestOptions  } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
 import { AccountDetail } from '../../models/accountDetails';
@@ -12,7 +12,7 @@ import { AccountDetail } from '../../models/accountDetails';
 */
 @Injectable()
 export class AccountsDetailsServiceProvider {
-endPoint:string="http://localhost:53725/customers/";
+  endPoint: string = "http://localhost:53725/customers/";
   constructor(public storage: Storage, public http: Http) {
     console.log('Hello AccontsDetailsServiceProvider Provider');
   }
@@ -37,6 +37,11 @@ endPoint:string="http://localhost:53725/customers/";
       console.log("accounts data" + data);
     }).map(res => res.json());
   }
+  public registerNewUser(newuser: any) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.endPoint+"register", newuser,options).map(res => res.json());
+  }
+
 }
-
-
