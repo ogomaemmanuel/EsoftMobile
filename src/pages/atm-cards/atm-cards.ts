@@ -43,7 +43,7 @@ export class AtmCardsPage implements OnInit {
 
     this.customerProvider.getLocallyStoredUserId().then(userId => {
       this.atmCardsProvider.blockAtmCard(atmCardId, userId).subscribe(result => {
-        if (!result) {
+        if (result) {
           this.atmCards[cardIndex].enabled = 0;
         }
       })
