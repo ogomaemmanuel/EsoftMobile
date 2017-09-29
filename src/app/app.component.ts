@@ -41,6 +41,7 @@ export class MyApp {
   }
   
   openContactUsPage(){
+    this.menuCtrl.close();
     this.nav.push(ContactUsPage);    
   }
 }
