@@ -23,12 +23,15 @@ export interface PageInterface {
 export class HomePage implements OnInit {
 
   private customer: Customer;
-  constructor(public storage: Storage, public loadingCtrl: LoadingController, public events: Events, public customerDetPro: CustomerDetailsserviceProvider, public navCtrl: NavController, public menutrl: MenuController, public navParams: NavParams) {
+  constructor(public menuCtrl: MenuController, public storage: Storage, public loadingCtrl: LoadingController, public events: Events, public customerDetPro: CustomerDetailsserviceProvider, public navCtrl: NavController, public navParams: NavParams) {
 
-
+    //this.menuCtrl.enabled(true);
 
   }
-
+  ionViewWillEnter() {
+   
+    this.menuCtrl.swipeEnable(true)
+  }
   ngOnInit(): void {
     var userId = this.navParams.get('userId');
     let loader = this.loadingCtrl.create({
@@ -51,7 +54,7 @@ export class HomePage implements OnInit {
     this.navCtrl.push(MinistatementMenuPage);
   }
 
-  goToAtmCards(){
+  goToAtmCards() {
     this.navCtrl.push(AtmCardsPage);
   }
 

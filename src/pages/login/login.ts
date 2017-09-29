@@ -24,14 +24,17 @@ export class LoginPage {
   public pin: string;
 
 
-  constructor(public menuCtrl: MenuController, public userAuthProvider: UserAuthProvider, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
-
-
+  constructor(public menuCtrl: MenuController,
+    public userAuthProvider: UserAuthProvider,
+    public navCtrl: NavController, public navParams: NavParams,
+    public alertCtrl: AlertController) {
+     // this.menuCtrl.enabled=false;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
-
+    this.menuCtrl.swipeEnable(false)
+    
   }
   ionViewWillEnter() {
 
@@ -40,7 +43,7 @@ export class LoginPage {
 
   ionViewDidLeave() {
 
-    this.menuCtrl.swipeEnable(true)
+    this.menuCtrl.swipeEnable(false)
   }
   authenticate() {
 
@@ -49,7 +52,7 @@ export class LoginPage {
     this.userAuthProvider.authenticateUser(this.pin, this.telephone);
   }
 
-  goToRegistrationPage(){
+  goToRegistrationPage() {
     this.navCtrl.push(RegistrationPage)
   }
 }

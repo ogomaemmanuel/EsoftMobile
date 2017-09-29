@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,MenuController } from 'ionic-angular';
 import { RegistrationModel } from "../../models/registrationModel";
 
 
@@ -14,15 +14,24 @@ import { RegistrationModel } from "../../models/registrationModel";
 @Component({
   selector: 'page-registration',
   templateUrl: 'registration.html',
-  
+
 })
 export class RegistrationPage {
-  public registrationModel:RegistrationModel=new RegistrationModel();
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public registrationModel: RegistrationModel = new RegistrationModel();
+  constructor(public menuCtrl: MenuController,public navCtrl: NavController, public navParams: NavParams) {
+    this.menuCtrl.swipeEnable(false)
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistrationPage');
+    this.menuCtrl.swipeEnable(false)
+  }
+  ionViewWillEnter() {
+
+    this.menuCtrl.swipeEnable(false)
   }
 
+  ionViewDidLeave() {
+
+    this.menuCtrl.swipeEnable(false)
+  }
 }

@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>RegistrationPage</ion-title>
+    <ion-title>Registration Page</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -19,7 +19,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Name</ion-label>
+      <ion-label floating>Full Name</ion-label>
       <ion-input type="password" [(ngModel)]="registrationModel.customerName"></ion-input>
     </ion-item>
 
@@ -29,7 +29,7 @@
       </ion-item>
 
       <ion-item>
-          <ion-label floating>Customer No</ion-label>
+          <ion-label floating>Member No</ion-label>
           <ion-input type="password" [(ngModel)]="registrationModel.customerNo"></ion-input>
         </ion-item>
         <ion-item>
@@ -38,4 +38,8 @@
           </ion-item>
 
   </ion-list>
+
+  <div padding>
+      <button ion-button block (click)="registerUser()">Register</button>
+    </div>
 </ion-content>
