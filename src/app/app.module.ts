@@ -21,6 +21,7 @@ import { MinistatementPage } from '../pages/ministatement/ministatement';
 import { AtmCardsProvider } from '../providers/atm-cards/atm-cards';
 import { AtmCardsPage } from '../pages/atm-cards/atm-cards';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { RegistrationPage } from '../pages/registration/registration';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
     MinistatementAccountsPage,
     MinistatementPage,
     AtmCardsPage,
-    ContactUsPage
+    ContactUsPage,
+    RegistrationPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
     MinistatementAccountsPage,
     MinistatementPage,
     AtmCardsPage,
-    ContactUsPage
+    ContactUsPage,
+    RegistrationPage,
     
   ],
   providers: [
@@ -69,6 +72,7 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
     MinistatementProvider,
     AtmCardsProvider,
     ContactUsPage,
+    RegistrationPage,
    
   ]
 })

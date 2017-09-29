@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserAuthProvider } from '../../providers/user-auth/user-auth';
 import { AlertController, MenuController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { RegistrationPage } from '../registration/registration';
 
 /**
  * Generated class for the LoginPage page.
@@ -46,6 +47,9 @@ export class LoginPage {
     //1) Validate the user
     //2) If valid redirect to home.
     this.userAuthProvider.authenticateUser(this.pin, this.telephone);
+  }
 
+  goToRegistrationPage(){
+    this.navCtrl.push(RegistrationPage)
   }
 }
