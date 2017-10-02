@@ -15,20 +15,29 @@
 
 <ion-content>
 
-
-  <ion-list>
     <ion-card *ngFor="let atmCard of atmCards;let idx = index">
       <img src="assets/images/credit-card.png" />
       <ion-card-content>
         <ion-card-title>
-          <p style="font-size: 16px;">Account: {{ atmCard.accountNo|trim}}</p>
+          <p style="font-size: 16px; text-align: center;">Account: {{ atmCard.accountNo|trim}}</p>
         <hr/>
         </ion-card-title>
-        <p>{{atmCard.enabled===1?"Block Card:":"Atm Card Blocked"}}<span><ion-toggle toggle-ios-background-color-on disabled="{{atmCard.enabled!==1}}" checked="{{atmCard.enabled===1}}" (ionChange)="blockAtmCard(atmCard.tbl_LinkedAtmCardsID,idx)"></ion-toggle></span></p>
-        <p>Card Number {{ atmCard.cardNumber|trim}}</p>
-        <p>Branch {{ atmCard.branch|trim}}</p>
-        <p>Date Linked {{ atmCard.dateLinked|trim|date:'medium'}}</p>
+        <ion-item>
+            <ion-label style="font-size: 15px; text-align:left;">{{atmCard.enabled===1?"Block Card:":"Atm Card Blocked"}}</ion-label>
+            <ion-toggle toggle-ios-background-color-on disabled="{{atmCard.enabled!==1}}" checked="{{atmCard.enabled===1}}" (ionChange)="blockAtmCard(atmCard.tbl_LinkedAtmCardsID,idx)"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label style="font-size: 15px; text-align:left;">Card Number</ion-label>
+            <ion-label style="font-size: 12px; text-align:left;" item-end>{{ atmCard.cardNumber|trim}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label style="font-size: 15px; text-align:left;">Branch</ion-label>
+            <ion-label style="font-size: 12px; text-align:right;" item-end>{{ atmCard.branchName|trim|titlecase}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label style="font-size: 15px; text-align:left;">Date Linked</ion-label>
+            <ion-label style="font-size: 12px; text-align:left;" item-end>{{ atmCard.dateLinked|trim|date:'medium'}}</ion-label>
+        </ion-item>
       </ion-card-content>
     </ion-card>
-  </ion-list>
 </ion-content>
