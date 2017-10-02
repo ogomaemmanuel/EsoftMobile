@@ -30,11 +30,11 @@ export class RegistrationPage implements OnInit {
   ngOnInit(): void {
     this.registrationModel= new RegistrationModel()
     this.registrationModelFormGroup = this.formBuilder.group({
-      mobileNo: [''],
-      customerName: [''],
-      customerNo: [''],
-      email: [''],
-      idNo: [''],
+      MobileNo: [''],
+      CustomerName: [''],
+      CustomerNo: [''],
+      Email: [''],
+      IdNo: [''],
       //idNo: ['',Validators.compose([Validators.maxLength(10), Validators.pattern('[0-9]{5-10}'), Validators.required])],
     });
     }
