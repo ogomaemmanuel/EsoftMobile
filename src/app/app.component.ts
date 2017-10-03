@@ -44,5 +44,10 @@ export class MyApp {
     this.menuCtrl.close();
     this.nav.push(ContactUsPage);    
   }
+
+  logout(){
+    this.menuCtrl.close();
+    this.nav.setRoot(LoginPage);
+  }
 }
 

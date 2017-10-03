@@ -1,8 +1,9 @@
 import { Component ,OnInit} from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, ToastController } from 'ionic-angular';
 import { RegistrationModel } from "../../models/registrationModel";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
+import { LoginPage } from '../login/login';
 
 
 /**
@@ -23,7 +24,14 @@ export class RegistrationPage implements OnInit {
   registrationModel:RegistrationModel;
   registrationModelFormGroup: FormGroup;
   submitAttempt: boolean = false;
-  constructor(public accountsDetailsServiceProvider: AccountsDetailsServiceProvider, public menuCtrl: MenuController, public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+  constructor(
+    public accountsDetailsServiceProvider: AccountsDetailsServiceProvider,
+     public menuCtrl: MenuController,
+      public navCtrl: NavController, 
+      public navParams: NavParams, 
+      public formBuilder: FormBuilder,
+      public toastCtrl: ToastController,
+    ) {
     
   }
 
@@ -55,6 +63,16 @@ export class RegistrationPage implements OnInit {
     console.log(this.registrationModelFormGroup.value);
     this.accountsDetailsServiceProvider.registerNewUser(this.registrationModelFormGroup.value).subscribe(resp => {
       console.log(resp);
+if(resp===true){
+  let toast = this.toastCtrl.create({
+    message: "Registration successful",
+    duration: 3000,
+    position:'middle'
+  });
+  toast.present();
+  this.navCtrl.setRoot(LoginPage)
+}
+
     }); 
     //this.submitAttempt = true;
 

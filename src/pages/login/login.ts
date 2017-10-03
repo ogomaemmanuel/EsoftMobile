@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserAuthProvider } from '../../providers/user-auth/user-auth';
-import { AlertController, MenuController } from 'ionic-angular';
+import { AlertController, MenuController, ToastController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { RegistrationPage } from '../registration/registration';
+import { HomePage } from '../home/home';
+import { ContactUsPage } from '../contact-us/contact-us';
 
 /**
  * Generated class for the LoginPage page.
@@ -26,15 +28,17 @@ export class LoginPage {
 
   constructor(public menuCtrl: MenuController,
     public userAuthProvider: UserAuthProvider,
-    public navCtrl: NavController, public navParams: NavParams,
+    public navCtrl: NavController,
+    public toastCtrl: ToastController,
+    public navParams: NavParams,
     public alertCtrl: AlertController) {
-     // this.menuCtrl.enabled=false;
+    // this.menuCtrl.enabled=false;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
     this.menuCtrl.swipeEnable(false)
-    
+
   }
   ionViewWillEnter() {
 
@@ -49,10 +53,33 @@ export class LoginPage {
 
     //1) Validate the user
     //2) If valid redirect to home.
-    this.userAuthProvider.authenticateUser(this.pin, this.telephone);
-  }
+    //var loginStatus=false;
+    this.userAuthProvider.authenticateUser(this.pin, this.telephone).subscribe(loginStatus => {
+      if (loginStatus.status ==="Success") {
+        console.log("Successful login",loginStatus);
+        this.navCtrl.setRoot(HomePage, { userId: loginStatus.user.tbl_CustomerId });
 
+      }
+
+      else {
+        console.log("Login error object",loginStatus);
+        this.presentToast(loginStatus.message)
+      }
+    });
+  }
   goToRegistrationPage() {
     this.navCtrl.push(RegistrationPage)
+  }
+
+  goToContactUsPage(){
+    this.navCtrl.push(ContactUsPage);
+  }
+  presentToast(message: string) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000,
+      position:'middle'
+    });
+    toast.present();
   }
 }
