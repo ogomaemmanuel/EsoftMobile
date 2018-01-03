@@ -22,6 +22,11 @@ import { AtmCardsProvider } from '../providers/atm-cards/atm-cards';
 import { AtmCardsPage } from '../pages/atm-cards/atm-cards';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { RegistrationPage } from '../pages/registration/registration';
+import { DepositMainPage } from '../pages/deposit-main/deposit-main';
+import { DepositProductCategoryPage } from '../pages/deposit-product-category/deposit-product-category';
+import { DepositsMenuPage } from '../pages/deposits-menu/deposits-menu';
+import { DepositTransactionProvider } from '../providers/deposit-transaction/deposit-transaction';
+import { DepositTransactionPage } from '../pages/deposit-transaction/deposit-transaction';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,11 @@ import { RegistrationPage } from '../pages/registration/registration';
     MinistatementPage,
     AtmCardsPage,
     ContactUsPage,
-    RegistrationPage
+    RegistrationPage,
+    DepositMainPage,
+    DepositProductCategoryPage,
+    DepositsMenuPage,
+    DepositTransactionPage,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +69,11 @@ import { RegistrationPage } from '../pages/registration/registration';
     AtmCardsPage,
     ContactUsPage,
     RegistrationPage,
+    DepositMainPage,
+    //one to be reomoved
+    DepositProductCategoryPage,
+    DepositsMenuPage,
+    DepositTransactionPage
     
   ],
   providers: [
@@ -73,6 +87,8 @@ import { RegistrationPage } from '../pages/registration/registration';
     AtmCardsProvider,
     ContactUsPage,
     RegistrationPage,
+    DepositTransactionProvider,
+   
    
   ]
 })

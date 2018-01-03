@@ -8,6 +8,7 @@ import { CustomerDetailsserviceProvider } from "../providers/customer-detailsser
 import { Customer } from "../models/customer";
 import { Events, MenuController} from 'ionic-angular';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { DepositMainPage } from '../pages/deposit-main/deposit-main';
 
 @Component({
   templateUrl: 'app.html',
@@ -48,6 +49,12 @@ export class MyApp {
   logout(){
     this.menuCtrl.close();
     this.nav.setRoot(LoginPage);
+  }
+
+  openDepositMainPage(){
+    this.menuCtrl.close();
+    this.nav.setRoot(DepositMainPage);
+
   }
 }
 

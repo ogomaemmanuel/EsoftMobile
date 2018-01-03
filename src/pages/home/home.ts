@@ -34,6 +34,8 @@ export class HomePage implements OnInit {
   }
   ngOnInit(): void {
     var userId = this.navParams.get('userId');
+    console.log("the userId is ",userId);
+   if(userId !==undefined){
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
     });
@@ -44,6 +46,7 @@ export class HomePage implements OnInit {
       this.events.publish("userLogedIn", this.customer);
       loader.dismiss();
     });
+  }
   }
 
   goToBalance() {

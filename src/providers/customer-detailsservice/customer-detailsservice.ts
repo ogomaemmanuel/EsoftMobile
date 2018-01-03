@@ -20,9 +20,16 @@ export class CustomerDetailsserviceProvider {
 
   getCustumerDetails(id: string) {
     return this.http.get("http://localhost:53725/customers/" + id).do(res => {
-      console.log(res);
+     
     })
       .map(resp => resp.json());
+  }
+
+  getCustomerDetailsByNumber(customerNo:string){
+    return this.http.get("http://localhost:53725/customers/member/" + customerNo).do(res => {
+      
+    })      .map(resp => resp);
+    
   }
 
 }
