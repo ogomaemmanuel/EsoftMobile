@@ -22,5 +22,11 @@ export class CustomerProvider {
     });
   }
 
+  public getLocallyStoredUser(){
+    return this.storage.get("customerDetails").then(data => {
+      return JSON.parse(data);
+    });
+  }
+
 
 }

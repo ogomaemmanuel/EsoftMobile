@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 109:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58,17 +58,17 @@ BalancesDetailsPage = __decorate([
 
 /***/ }),
 
-/***/ 110:
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BalacesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__balances_details_balances_details__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__balances_details_balances_details__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_customer__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_customer__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_customer_customer__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -177,7 +177,7 @@ BalacesPage = __decorate([
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -228,16 +228,16 @@ MinistatementPage = __decorate([
 
 /***/ }),
 
-/***/ 112:
+/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MinistatementAccountsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_ministatement_ministatement__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_ministatement_ministatement__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_customer_customer__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -352,7 +352,7 @@ MinistatementAccountsPage = __decorate([
 
 /***/ }),
 
-/***/ 113:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -360,8 +360,8 @@ MinistatementAccountsPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_customer_customer__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_ministatement_ministatement__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ministatement_accounts_ministatement_accounts__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_ministatement_ministatement__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ministatement_accounts_ministatement_accounts__ = __webpack_require__(114);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -457,14 +457,14 @@ MinistatementMenuPage = __decorate([
 
 /***/ }),
 
-/***/ 114:
+/***/ 116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AtmCardsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_atm_cards_atm_cards__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_atm_cards_atm_cards__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_customer_customer__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -537,17 +537,17 @@ AtmCardsPage = __decorate([
 
 /***/ }),
 
-/***/ 115:
+/***/ 117:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistrationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_registrationModel__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_registrationModel__ = __webpack_require__(263);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -635,17 +635,19 @@ RegistrationPage = __decorate([
 
 /***/ }),
 
-/***/ 116:
+/***/ 118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepositTransactionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_deposit_transaction_deposit_transaction__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_deposit_transaction_deposit_transaction__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__deposits_menu_deposits_menu__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__deposits_menu_deposits_menu__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_device_info_device_info__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_customer_customer__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -661,6 +663,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
  * Generated class for the DepositTransactionPage page.
  *
@@ -668,12 +672,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var DepositTransactionPage = (function () {
-    function DepositTransactionPage(navCtrl, depositTransactionProvider, navParams, formBuilder, alertCtrl) {
+    function DepositTransactionPage(navCtrl, depositTransactionProvider, navParams, formBuilder, alertCtrl, deviceInfoProvider, customerProvider) {
         this.navCtrl = navCtrl;
         this.depositTransactionProvider = depositTransactionProvider;
         this.navParams = navParams;
         this.formBuilder = formBuilder;
         this.alertCtrl = alertCtrl;
+        this.deviceInfoProvider = deviceInfoProvider;
+        this.customerProvider = customerProvider;
         this.accountDetails = [];
     }
     DepositTransactionPage.prototype.ngOnInit = function () {
@@ -696,20 +702,23 @@ var DepositTransactionPage = (function () {
     };
     DepositTransactionPage.prototype.submit = function () {
         var _this = this;
-        this.depositTrx = this.depositFormGroup.value;
-        this.depositTrx.CustomerNo = this.navParams.get("customer").customerNo;
-        this.depositTransactionProvider.depositCash(this.depositTrx).subscribe(function (res) {
-            console.log(res);
-            if (res.ok) {
-                _this.showRedirectDialog();
-            }
+        this.customerProvider.getLocallyStoredUser().then(function (user) {
+            _this.depositTrx = _this.depositFormGroup.value;
+            _this.depositTrx.CustomerNo = _this.navParams.get("customer").customerNo;
+            _this.depositTrx.DeviceInfo = _this.deviceInfoProvider.getDevice();
+            _this.depositTrx.TellerLoginCode = user.loginCode;
+            _this.depositTransactionProvider.depositCash(_this.depositTrx).subscribe(function (res) {
+                if (res.ok) {
+                    _this.showRedirectDialog();
+                }
+            });
         });
     };
     DepositTransactionPage.prototype.showRedirectDialog = function () {
         var _this = this;
         var alert = this.alertCtrl.create({
             title: 'Deposit Money',
-            message: 'Do you want to do another transaction for ' + this.navParams.get("customer").customerName,
+            message: 'Transaction posted Successfully,do you want to do another transaction for ' + this.navParams.get("customer").customerName,
             buttons: [
                 {
                     text: 'Cancel',
@@ -733,94 +742,17 @@ var DepositTransactionPage = (function () {
 DepositTransactionPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-deposit-transaction',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\deposit-transaction\deposit-transaction.html"*/'<!--\n  Generated template for the DepositTransactionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Deposit Transaction</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n  <form [formGroup]="depositFormGroup"  (ngSubmit)="submit()">\n    <ion-item text-wrap>\n     \n      <ion-select formControlName="ProductCode" [selectOptions]="selectOptions" class="select-list"placeholder="Select Account" string="Select Account">\n          <ion-option *ngFor="let accountDetail of accountDetails" value="{{accountDetail.accountName}}">\n                 {{accountDetail.accountName}}\n             </ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item *ngIf="depositFormGroup.controls.ProductCode.hasError(\'required\') && depositFormGroup.controls.ProductCode.touched">\n        <p>Sorry, field account is required!</p>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Amount</ion-label>\n      <ion-input formControlName="TrxAmount" type="text"></ion-input>\n    </ion-item>\n    <ion-item *ngIf="depositFormGroup.controls.TrxAmount.hasError(\'required\') && depositFormGroup.controls.TrxAmount.touched">\n        <p>Sorry, field amount is required!</p>\n    </ion-item>\n\n    <ion-item *ngIf="depositFormGroup.controls.TrxAmount.hasError(\'pattern\') && depositFormGroup.controls.TrxAmount.touched">\n        <p>Sorry, Enter a valid input!</p>\n    </ion-item>\n    <div padding>\n      <button type="submit" [disabled]="!depositFormGroup.valid" ion-button block>Commit</button>\n    </div>\n  </form>\n</ion-content>'/*ion-inline-end:"C:\EsoftMobile\src\pages\deposit-transaction\deposit-transaction.html"*/,
+        selector: 'page-deposit-transaction',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\deposit-transaction\deposit-transaction.html"*/'<!--\n  Generated template for the DepositTransactionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Deposit Transaction</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n  <form [formGroup]="depositFormGroup"  (ngSubmit)="submit()">\n    <ion-item text-wrap>\n     \n      <ion-select formControlName="ProductCode" [selectOptions]="selectOptions" class="select-list"placeholder="Select Account" string="Select Account">\n          <ion-option *ngFor="let accountDetail of accountDetails" value="{{accountDetail.accountNo}}">\n                 {{accountDetail.productName}}\n             </ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item *ngIf="depositFormGroup.controls.ProductCode.hasError(\'required\') && depositFormGroup.controls.ProductCode.touched">\n        <p>Sorry, field account is required!</p>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Amount</ion-label>\n      <ion-input formControlName="TrxAmount" type="text"></ion-input>\n    </ion-item>\n    <ion-item *ngIf="depositFormGroup.controls.TrxAmount.hasError(\'required\') && depositFormGroup.controls.TrxAmount.touched">\n        <p>Sorry, field amount is required!</p>\n    </ion-item>\n\n    <ion-item *ngIf="depositFormGroup.controls.TrxAmount.hasError(\'pattern\') && depositFormGroup.controls.TrxAmount.touched">\n        <p>Sorry, Enter a valid input!</p>\n    </ion-item>\n    <div padding>\n      <button type="submit" [disabled]="!depositFormGroup.valid" ion-button block>Commit</button>\n    </div>\n  </form>\n</ion-content>'/*ion-inline-end:"C:\EsoftMobile\src\pages\deposit-transaction\deposit-transaction.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_deposit_transaction_deposit_transaction__["a" /* DepositTransactionProvider */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_deposit_transaction_deposit_transaction__["a" /* DepositTransactionProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_deposit_transaction_deposit_transaction__["a" /* DepositTransactionProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__providers_device_info_device_info__["a" /* DeviceInfoProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_device_info_device_info__["a" /* DeviceInfoProvider */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_7__providers_customer_customer__["a" /* CustomerProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__providers_customer_customer__["a" /* CustomerProvider */]) === "function" && _g || Object])
 ], DepositTransactionPage);
 
+var _a, _b, _c, _d, _e, _f, _g;
 //# sourceMappingURL=deposit-transaction.js.map
 
 /***/ }),
 
-/***/ 117:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepositsMenuPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(48);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the DepositsMenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DepositsMenuPage = (function () {
-    function DepositsMenuPage(navCtrl, navParams, accountdetailProv) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.accountdetailProv = accountdetailProv;
-    }
-    DepositsMenuPage.prototype.ngOnInit = function () {
-        this.customer = this.navParams.get("customer");
-    };
-    DepositsMenuPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DepositsMenuPage');
-    };
-    DepositsMenuPage.prototype.getLoanAccounts = function () {
-        var _this = this;
-        this.accountdetailProv.getLoansAccountDetails(this.customer.tbl_CustomerID).subscribe(function (accounBalances) {
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__["a" /* DepositTransactionPage */], { accountDetails: accounBalances, accountCategory: "Loans Accounts", customer: _this.customer });
-        });
-    };
-    DepositsMenuPage.prototype.getSharesAccounts = function () {
-        var _this = this;
-        this.accountdetailProv.getSharesAccountDetails(this.customer.tbl_CustomerID).subscribe(function (accounBalances) {
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__["a" /* DepositTransactionPage */], { accountDetails: accounBalances, accountCategory: "Shares Accounts", customer: _this.customer });
-        });
-    };
-    DepositsMenuPage.prototype.getSavingAccounts = function () {
-        var _this = this;
-        this.accountdetailProv.getSavingsAccountDetails(this.customer.tbl_CustomerID).subscribe(function (accounBalances) {
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__["a" /* DepositTransactionPage */], { accountDetails: accounBalances, accountCategory: "Savings Accounts", customer: _this.customer });
-        });
-    };
-    return DepositsMenuPage;
-}());
-DepositsMenuPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-deposits-menu',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\deposits-menu\deposits-menu.html"*/'<!--\n  Generated template for the DepositsMenuPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Select Category</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list list-ios>\n    <button ion-item (click)="getSavingAccounts()">\n      Savings Accounts\n    </button>\n    <button ion-item (click)="getLoanAccounts()">\n      Loans Accounts\n    </button>\n    <button ion-item (click)="getSharesAccounts()">\n      Shares Accounts\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\deposits-menu\deposits-menu.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */]])
-], DepositsMenuPage);
-
-//# sourceMappingURL=deposits-menu.js.map
-
-/***/ }),
-
-/***/ 118:
+/***/ 119:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -828,8 +760,8 @@ DepositsMenuPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__deposits_menu_deposits_menu__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__deposits_menu_deposits_menu__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -863,18 +795,25 @@ var DepositMainPage = (function () {
     };
     DepositMainPage.prototype.ngOnInit = function () {
         this.customerFormGroup = this.formBuilder.group({
-            CustomerNo: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(10), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[0-9]{1,6}'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            CustomerNo: [
+                '',
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(10),
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[0-9]{1,6}'),
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])
+            ],
         });
     };
     DepositMainPage.prototype.submit = function () {
         var _this = this;
-        this.customerDetailsserviceProvider.getCustomerDetailsByNumber(this.customerFormGroup.value.CustomerNo).subscribe(function (resp) {
+        this.customerDetailsserviceProvider
+            .getCustomerDetailsByNumber(this.customerFormGroup.value.CustomerNo)
+            .subscribe(function (resp) {
             if (resp.ok) {
                 _this.confirmDeposit(resp.json());
-                console.log("this is the response", resp.json());
             }
-            else {
-                console.log(resp.statusText);
+        }, function (err) {
+            if (err.status == 404) {
+                _this.alertMemberNotFoundError(JSON.parse(err._body).message);
             }
         });
     };
@@ -903,6 +842,21 @@ var DepositMainPage = (function () {
         });
         alert.present();
     };
+    DepositMainPage.prototype.alertMemberNotFoundError = function (errorText) {
+        var alert = this.alertCtrl.create({
+            title: 'Member Not Found',
+            message: errorText,
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                    }
+                },
+            ]
+        });
+        alert.present();
+    };
     return DepositMainPage;
 }());
 DepositMainPage = __decorate([
@@ -911,18 +865,15 @@ DepositMainPage = __decorate([
         selector: 'page-deposit-main',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\deposit-main\deposit-main.html"*/'<!--\n  Generated template for the DepositMainPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>DepositMainPage</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form class="list" [formGroup]="customerFormGroup" (ngSubmit)="submit()">\n        <ion-item>\n          <ion-label floating>Customer No</ion-label>\n          <ion-input type="text" formControlName="CustomerNo"></ion-input>\n        </ion-item>\n        <div padding>\n          <button type="submit" ion-button block>Next</button>\n        </div>\n            </form>\n     \n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\deposit-main\deposit-main.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object])
 ], DepositMainPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=deposit-main.js.map
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -935,64 +886,64 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 126;
+webpackEmptyAsyncContext.id = 127;
 
 /***/ }),
 
-/***/ 168:
+/***/ 169:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/atm-cards/atm-cards.module": [
-		300,
+		302,
 		12
 	],
 	"../pages/balaces/balaces.module": [
-		296,
+		298,
 		11
 	],
 	"../pages/balances-details/balances-details.module": [
-		295,
+		297,
 		10
 	],
 	"../pages/contact-us/contact-us.module": [
-		302,
+		304,
 		9
 	],
 	"../pages/deposit-main/deposit-main.module": [
-		307,
+		309,
 		8
 	],
 	"../pages/deposit-product-category/deposit-product-category.module": [
-		304,
+		306,
 		7
 	],
 	"../pages/deposit-transaction/deposit-transaction.module": [
-		305,
+		307,
 		6
 	],
 	"../pages/deposits-menu/deposits-menu.module": [
-		306,
+		308,
 		5
 	],
 	"../pages/login/login.module": [
-		303,
+		305,
 		4
 	],
 	"../pages/ministatement-accounts/ministatement-accounts.module": [
-		298,
+		300,
 		3
 	],
 	"../pages/ministatement-menu/ministatement-menu.module": [
-		299,
+		301,
 		2
 	],
 	"../pages/ministatement/ministatement.module": [
-		297,
+		299,
 		1
 	],
 	"../pages/registration/registration.module": [
-		301,
+		303,
 		0
 	]
 };
@@ -1007,12 +958,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 168;
+webpackAsyncContext.id = 169;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 169:
+/***/ 170:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1027,14 +978,14 @@ var Customer = (function () {
 
 /***/ }),
 
-/***/ 170:
+/***/ 171:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AtmCardsProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1079,14 +1030,14 @@ AtmCardsProvider = __decorate([
 
 /***/ }),
 
-/***/ 171:
+/***/ 172:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepositTransactionProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1129,7 +1080,53 @@ DepositTransactionProvider = __decorate([
 
 /***/ }),
 
-/***/ 215:
+/***/ 173:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeviceInfoProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__ = __webpack_require__(174);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the DeviceInfoProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var DeviceInfoProvider = (function () {
+    function DeviceInfoProvider(device) {
+        this.device = device;
+        this.deviceInfo = this.device;
+    }
+    DeviceInfoProvider.prototype.getDevice = function () {
+        return JSON.stringify(this.deviceInfo);
+    };
+    return DeviceInfoProvider;
+}());
+DeviceInfoProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */]])
+], DeviceInfoProvider);
+
+//# sourceMappingURL=device-info.js.map
+
+/***/ }),
+
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1175,13 +1172,13 @@ DepositProductCategoryPage = __decorate([
 
 /***/ }),
 
-/***/ 216:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(237);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1189,46 +1186,50 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 235:
+/***/ 237:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_http__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_customer_customer__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_balaces_balaces__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__commonFunctions_TrimPipe__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_balances_details_balances_details__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_ministatement_ministatement__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ministatement_menu_ministatement_menu__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_ministatement_accounts_ministatement_accounts__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_ministatement_ministatement__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_atm_cards_atm_cards__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_atm_cards_atm_cards__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_contact_us_contact_us__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_registration_registration__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_deposit_main_deposit_main__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_deposit_product_category_deposit_product_category__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_deposits_menu_deposits_menu__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_deposit_transaction_deposit_transaction__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_deposit_transaction_deposit_transaction__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_balaces_balaces__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__commonFunctions_TrimPipe__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_balances_details_balances_details__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_ministatement_ministatement__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ministatement_menu_ministatement_menu__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_ministatement_accounts_ministatement_accounts__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_ministatement_ministatement__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_atm_cards_atm_cards__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_atm_cards_atm_cards__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_contact_us_contact_us__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_registration_registration__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_deposit_main_deposit_main__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_deposit_product_category_deposit_product_category__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_deposits_menu_deposits_menu__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_deposit_transaction_deposit_transaction__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_deposit_transaction_deposit_transaction__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_device_info_device_info__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_device__ = __webpack_require__(174);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1336,9 +1337,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */],
             __WEBPACK_IMPORTED_MODULE_16__providers_ministatement_ministatement__["a" /* MinistatementProvider */],
             __WEBPACK_IMPORTED_MODULE_20__providers_atm_cards_atm_cards__["a" /* AtmCardsProvider */],
+            __WEBPACK_IMPORTED_MODULE_30__ionic_native_device__["a" /* Device */],
             __WEBPACK_IMPORTED_MODULE_22__pages_contact_us_contact_us__["a" /* ContactUsPage */],
             __WEBPACK_IMPORTED_MODULE_23__pages_registration_registration__["a" /* RegistrationPage */],
             __WEBPACK_IMPORTED_MODULE_27__providers_deposit_transaction_deposit_transaction__["a" /* DepositTransactionProvider */],
+            __WEBPACK_IMPORTED_MODULE_29__providers_device_info_device_info__["a" /* DeviceInfoProvider */],
         ]
     })
 ], AppModule);
@@ -1347,7 +1350,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 261:
+/***/ 263:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1362,7 +1365,7 @@ var RegistrationModel = (function () {
 
 /***/ }),
 
-/***/ 262:
+/***/ 264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1370,7 +1373,7 @@ var RegistrationModel = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1421,20 +1424,21 @@ UserAuthProvider = __decorate([
 
 /***/ }),
 
-/***/ 293:
+/***/ 295:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_customer__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_us_contact_us__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_deposit_main_deposit_main__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_customer__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_us_contact_us__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_deposit_main_deposit_main__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_customer_customer__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1454,11 +1458,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MyApp = (function () {
-    function MyApp(menuCtrl, events, platform, statusBar, splashScreen) {
+    function MyApp(menuCtrl, events, platform, statusBar, splashScreen, customerProvider, alertCtrl) {
         var _this = this;
         this.menuCtrl = menuCtrl;
         this.events = events;
+        this.customerProvider = customerProvider;
+        this.alertCtrl = alertCtrl;
         this.customer = new __WEBPACK_IMPORTED_MODULE_6__models_customer__["a" /* Customer */]();
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */];
         platform.ready().then(function () {
@@ -1487,26 +1494,40 @@ var MyApp = (function () {
         this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */]);
     };
     MyApp.prototype.openDepositMainPage = function () {
-        this.menuCtrl.close();
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_8__pages_deposit_main_deposit_main__["a" /* DepositMainPage */]);
+        var _this = this;
+        this.customerProvider.getLocallyStoredUser().then(function (user) {
+            if (user.isTeller) {
+                _this.menuCtrl.close();
+                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_8__pages_deposit_main_deposit_main__["a" /* DepositMainPage */]);
+            }
+            else {
+                var alert = _this.alertCtrl.create({
+                    title: 'Not Teller',
+                    subTitle: 'You are not authorised to deposit Cash',
+                    buttons: ['Dismiss']
+                });
+                alert.present();
+            }
+        });
     };
     return MyApp;
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */]) === "function" && _a || Object)
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\EsoftMobile\src\app\app.html"*/'<ion-menu id="app-menu" [content]="content" class="app-menu">\n\n  <ion-header style="background-color:#0400FF;color:white">\n\n    <ion-list style="background-color:#0400FF;color:white">\n\n      <ion-item style="background-color:#0400FF;color:white">\n\n        <ion-avatar item-left>\n\n          <img src="https://www.joshmorony.com/wp-content/uploads/2016/07/cloudo-screenshots.png">\n\n        </ion-avatar>\n\n        <h2>{{customer.customerName|trim|titlecase}}</h2>\n\n        <h3>{{customer.mobileNo}}</h3>\n\n      </ion-item>\n\n    </ion-list>\n\n    <!-- <ion-toolbar red>\n\n      <ion-title right>Menu</ion-title>\n\n    </ion-toolbar> -->\n\n  </ion-header>\n\n  <ion-content class="app-menu">\n\n    <ion-list>\n\n      <button ion-item (click)="openPageHomePage()">\n\n        <ion-icon name="ios-home-outline"></ion-icon>&nbsp; &nbsp;Home\n\n      </button>\n\n      <button ion-item (click)="openPageHomePage()">\n\n      <ion-icon name="ios-settings-outline"></ion-icon>&nbsp; &nbsp;Settings\n\n      </button>\n\n      <button ion-item (click)="openContactUsPage()">\n\n       <ion-icon name="ios-call-outline"></ion-icon>&nbsp; &nbsp;Contact Us\n\n      </button>\n\n\n\n      <button ion-item (click)="openDepositMainPage()">\n\n        <ion-icon name="ios-call-outline"></ion-icon>&nbsp; &nbsp;Deposit Cash\n\n       </button>\n\n      <button ion-item (click)="logout()">\n\n    \n\n      <ion-icon name="ios-log-out"></ion-icon>&nbsp; &nbsp;Logout\n\n\n\n      </button>\n\n    </ion-list>\n\n    \n\n  </ion-content>\n\n<ion-footer>\n\n  <!-- <ion-segment [(ngModel)]="icons" color="secondary">\n\n    <ion-segment-button value="camera">\n\n      <ion-icon name="camera"></ion-icon>\n\n    </ion-segment-button>\n\n    <ion-segment-button value="bookmark">\n\n      <ion-icon name="bookmark"></ion-icon>\n\n    </ion-segment-button>\n\n  </ion-segment> -->\n\n  \n\n</ion-footer>\n\n\n\n</ion-menu>\n\n\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>'/*ion-inline-end:"C:\EsoftMobile\src\app\app.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_9__providers_customer_customer__["a" /* CustomerProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__providers_customer_customer__["a" /* CustomerProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _h || Object])
 ], MyApp);
 
+var _a, _b, _c, _d, _e, _f, _g, _h;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
-/***/ 294:
+/***/ 296:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1545,9 +1566,9 @@ TrimPipe = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(48);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1578,27 +1599,97 @@ var CustomerProvider = (function () {
             return JSON.parse(data).tbl_CustomerID;
         });
     };
+    CustomerProvider.prototype.getLocallyStoredUser = function () {
+        return this.storage.get("customerDetails").then(function (data) {
+            return JSON.parse(data);
+        });
+    };
     return CustomerProvider;
 }());
 CustomerProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _b || Object])
 ], CustomerProvider);
 
+var _a, _b;
 //# sourceMappingURL=customer.js.map
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountsDetailsServiceProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MinistatementProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(49);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the MinistatementProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var MinistatementProvider = (function () {
+    function MinistatementProvider(http) {
+        this.http = http;
+        this.endpoint = "http://localhost:53725/customers/";
+        console.log('Hello MinistatementProvider Provider');
+    }
+    MinistatementProvider.prototype.getSavingsAccounts = function (id) {
+        return this.http.get(this.endpoint + id + "/savings-accounts").map(function (resp) { return resp.json(); });
+    };
+    MinistatementProvider.prototype.getLoansAccounts = function (id) {
+        return this.http.get(this.endpoint + id + "/loans-accounts").map(function (resp) { return resp.json(); });
+    };
+    MinistatementProvider.prototype.getSharesAccounts = function (id) {
+        return this.http.get(this.endpoint + id + "/shares-accounts").map(function (resp) { return resp.json(); });
+    };
+    MinistatementProvider.prototype.getSavingsMiniStatement = function (id, account) {
+        return this.http.get(this.endpoint + id + "/savings-statement/" + account).map(function (resp) { return resp.json(); });
+    };
+    MinistatementProvider.prototype.getLoansMiniStatement = function (id, account) {
+        return this.http.get(this.endpoint + id + "/loans-statement/" + account).map(function (resp) { return resp.json(); });
+    };
+    MinistatementProvider.prototype.getSharesMiniStatement = function (id, account) {
+        return this.http.get(this.endpoint + id + "/shares-statement/" + account).map(function (resp) { return resp.json(); });
+    };
+    return MinistatementProvider;
+}());
+MinistatementProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], MinistatementProvider);
+
+//# sourceMappingURL=ministatement.js.map
+
+/***/ }),
+
+/***/ 50:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__balaces_balaces__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ministatement_menu_ministatement_menu__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__atm_cards_atm_cards__ = __webpack_require__(116);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1612,65 +1703,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/*
-  Generated class for the AccontsDetailsServiceProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var AccountsDetailsServiceProvider = (function () {
-    function AccountsDetailsServiceProvider(storage, http) {
+
+
+
+var HomePage = (function () {
+    function HomePage(menuCtrl, storage, loadingCtrl, events, customerDetPro, navCtrl, navParams) {
+        //this.menuCtrl.enabled(true);
+        this.menuCtrl = menuCtrl;
         this.storage = storage;
-        this.http = http;
-        this.endPoint = "http://localhost:53725/customers/";
-        console.log('Hello AccontsDetailsServiceProvider Provider');
+        this.loadingCtrl = loadingCtrl;
+        this.events = events;
+        this.customerDetPro = customerDetPro;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
     }
-    AccountsDetailsServiceProvider.prototype.getSavingsAccountDetails = function (id) {
-        return this.http.get(this.endPoint + id + "/savings").do(function (data) {
-            data.json();
-            console.log("accounts data" + data);
-        }).map(function (res) { return res.json(); });
+    HomePage.prototype.ionViewWillEnter = function () {
+        this.menuCtrl.swipeEnable(true);
     };
-    AccountsDetailsServiceProvider.prototype.getLoansAccountDetails = function (id) {
-        return this.http.get(this.endPoint + id + "/loans").do(function (data) {
-            data.json();
-            console.log("accounts data" + data);
-        }).map(function (res) { return res.json(); });
+    HomePage.prototype.ngOnInit = function () {
+        var _this = this;
+        var userId = this.navParams.get('userId');
+        console.log("the userId is ", userId);
+        if (userId !== undefined) {
+            var loader_1 = this.loadingCtrl.create({
+                content: "Please wait...",
+            });
+            loader_1.present();
+            this.customerDetPro.getCustumerDetails(userId).subscribe(function (data) {
+                _this.customer = data;
+                _this.storage.set("customerDetails", JSON.stringify(_this.customer));
+                _this.events.publish("userLogedIn", _this.customer);
+                loader_1.dismiss();
+            });
+        }
     };
-    AccountsDetailsServiceProvider.prototype.getSharesAccountDetails = function (id) {
-        return this.http.get(this.endPoint + id + "/shares").do(function (data) {
-            data.json();
-            console.log("accounts data" + data);
-        }).map(function (res) { return res.json(); });
+    HomePage.prototype.goToBalance = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__balaces_balaces__["a" /* BalacesPage */]);
     };
-    AccountsDetailsServiceProvider.prototype.registerNewUser = function (newuser) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
-        headers.append('Content-Type', 'application/json');
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.post(this.endPoint + "register", newuser, options).map(function (res) { return res.json(); });
+    HomePage.prototype.goToMiniStatementMenu = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__ministatement_menu_ministatement_menu__["a" /* MinistatementMenuPage */]);
     };
-    return AccountsDetailsServiceProvider;
+    HomePage.prototype.goToAtmCards = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__atm_cards_atm_cards__["a" /* AtmCardsPage */]);
+    };
+    return HomePage;
 }());
-AccountsDetailsServiceProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-], AccountsDetailsServiceProvider);
+HomePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-home',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle icon-only>\n\n      <ion-icon name=\'menu\'></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Esoft Home\n\n    </ion-title>\n\n  </ion-navbar>\n\n  <!-- <ion-searchbar\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar> -->\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-grid>\n\n    <!-- <ion-row>\n\n      <ion-col col-6 (click)="goToBalance()">\n\n        <ion-card> \n\n          <img src="assets/images/us6K36jPS8FuKvuvMjGf_userprofile.png"  style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto; " />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                    \n\n              User Information\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n\n\n      <ion-col col-6 (click)="goToMiniStatementMenu()">\n\n        <ion-card> \n\n          <img src="assets/images/oZhjyj65TcWK6Bw7nSEE_memberstatistics.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                   \n\n              Member Statistics\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n     </ion-row> -->\n\n\n\n    <ion-row>\n\n      <ion-col col-6 (click)="goToBalance()">\n\n        <ion-card>\n\n          <img src="assets/images/o23OlcgsRu2IujBx4LSk_transferfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"\n\n          />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">\n\n            Check Balances\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n\n\n      <ion-col col-6 (click)="goToMiniStatementMenu()">\n\n        <ion-card>\n\n          <img src="assets/images/6SOe72BFQmz3hXCgKM7Y_ministatement.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"\n\n          />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">\n\n            Mini Statements\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col col-6 (click)="goToAtmCards()">\n\n        <ion-card>\n\n          <img src="assets/images/ZqX8xkz9RkedgYxBCdHS_withdrawfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"\n\n          />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">\n\n            Linked Cards\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n\n\n\n\n      <!--\n\n      <ion-col col-6 (click)="goToMiniStatementMenu()">\n\n        <ion-card> \n\n          <img src="assets/images/VWCZHeiSR67BlPhrKNP3_Loans.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                      \n\n              Loans           \n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col> \n\n    -->\n\n    </ion-row>\n\n    <!-- \n\n     <ion-row>\n\n       <ion-col col-3></ion-col>\n\n      <ion-col col-6 (click)="goToBalance()">\n\n        <ion-card> \n\n          <img src="assets/images/pSKRSpaJQSGCCPvdDIuv_cashdeposit.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                      \n\n              Security Settings       \n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n       <ion-col col-3></ion-col>\n\n     </ion-row> -->\n\n  </ion-grid>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\EsoftMobile\src\pages\home\home.html"*/,
+        providers: [__WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */]],
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+], HomePage);
 
-//# sourceMappingURL=acconts-details-service.js.map
+//# sourceMappingURL=home.js.map
 
 /***/ }),
 
-/***/ 54:
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_auth_user_auth__ = __webpack_require__(262);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__registration_registration__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_us_contact_us__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_auth_user_auth__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__registration_registration__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_us_contact_us__ = __webpack_require__(56);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1763,7 +1864,7 @@ LoginPage = __decorate([
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1831,80 +1932,15 @@ ContactUsPage = __decorate([
 
 /***/ }),
 
-/***/ 84:
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MinistatementProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/*
-  Generated class for the MinistatementProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var MinistatementProvider = (function () {
-    function MinistatementProvider(http) {
-        this.http = http;
-        this.endpoint = "http://localhost:53725/customers/";
-        console.log('Hello MinistatementProvider Provider');
-    }
-    MinistatementProvider.prototype.getSavingsAccounts = function (id) {
-        return this.http.get(this.endpoint + id + "/savings-accounts").map(function (resp) { return resp.json(); });
-    };
-    MinistatementProvider.prototype.getLoansAccounts = function (id) {
-        return this.http.get(this.endpoint + id + "/loans-accounts").map(function (resp) { return resp.json(); });
-    };
-    MinistatementProvider.prototype.getSharesAccounts = function (id) {
-        return this.http.get(this.endpoint + id + "/shares-accounts").map(function (resp) { return resp.json(); });
-    };
-    MinistatementProvider.prototype.getSavingsMiniStatement = function (id, account) {
-        return this.http.get(this.endpoint + id + "/savings-statement/" + account).map(function (resp) { return resp.json(); });
-    };
-    MinistatementProvider.prototype.getLoansMiniStatement = function (id, account) {
-        return this.http.get(this.endpoint + id + "/loans-statement/" + account).map(function (resp) { return resp.json(); });
-    };
-    MinistatementProvider.prototype.getSharesMiniStatement = function (id, account) {
-        return this.http.get(this.endpoint + id + "/shares-statement/" + account).map(function (resp) { return resp.json(); });
-    };
-    return MinistatementProvider;
-}());
-MinistatementProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-], MinistatementProvider);
-
-//# sourceMappingURL=ministatement.js.map
-
-/***/ }),
-
-/***/ 85:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepositsMenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__balaces_balaces__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ministatement_menu_ministatement_menu__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__atm_cards_atm_cards__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_ministatement_ministatement__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1917,62 +1953,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+//import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
 
-
-
-
-
-var HomePage = (function () {
-    function HomePage(menuCtrl, storage, loadingCtrl, events, customerDetPro, navCtrl, navParams) {
-        //this.menuCtrl.enabled(true);
-        this.menuCtrl = menuCtrl;
-        this.storage = storage;
-        this.loadingCtrl = loadingCtrl;
-        this.events = events;
-        this.customerDetPro = customerDetPro;
+/**
+ * Generated class for the DepositsMenuPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DepositsMenuPage = (function () {
+    function DepositsMenuPage(navCtrl, navParams, ministatementProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.ministatementProvider = ministatementProvider;
     }
-    HomePage.prototype.ionViewWillEnter = function () {
-        this.menuCtrl.swipeEnable(true);
+    DepositsMenuPage.prototype.ngOnInit = function () {
+        this.customer = this.navParams.get("customer");
     };
-    HomePage.prototype.ngOnInit = function () {
+    DepositsMenuPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DepositsMenuPage');
+    };
+    DepositsMenuPage.prototype.getLoanAccounts = function () {
         var _this = this;
-        var userId = this.navParams.get('userId');
-        console.log("the userId is ", userId);
-        if (userId !== undefined) {
-            var loader_1 = this.loadingCtrl.create({
-                content: "Please wait...",
-            });
-            loader_1.present();
-            this.customerDetPro.getCustumerDetails(userId).subscribe(function (data) {
-                _this.customer = data;
-                _this.storage.set("customerDetails", JSON.stringify(_this.customer));
-                _this.events.publish("userLogedIn", _this.customer);
-                loader_1.dismiss();
-            });
-        }
+        this.ministatementProvider.getLoansAccounts(this.customer.tbl_CustomerID).subscribe(function (accounBalances) {
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__["a" /* DepositTransactionPage */], { accountDetails: accounBalances, accountCategory: "Loans Accounts", customer: _this.customer });
+        });
     };
-    HomePage.prototype.goToBalance = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__balaces_balaces__["a" /* BalacesPage */]);
+    DepositsMenuPage.prototype.getSharesAccounts = function () {
+        var _this = this;
+        this.ministatementProvider.getSharesAccounts(this.customer.tbl_CustomerID).subscribe(function (accounBalances) {
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__["a" /* DepositTransactionPage */], { accountDetails: accounBalances, accountCategory: "Shares Accounts", customer: _this.customer });
+        });
     };
-    HomePage.prototype.goToMiniStatementMenu = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__ministatement_menu_ministatement_menu__["a" /* MinistatementMenuPage */]);
+    DepositsMenuPage.prototype.getSavingAccounts = function () {
+        var _this = this;
+        this.ministatementProvider.getSavingsAccounts(this.customer.tbl_CustomerID).subscribe(function (accounBalances) {
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__deposit_transaction_deposit_transaction__["a" /* DepositTransactionPage */], { accountDetails: accounBalances, accountCategory: "Savings Accounts", customer: _this.customer });
+        });
     };
-    HomePage.prototype.goToAtmCards = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__atm_cards_atm_cards__["a" /* AtmCardsPage */]);
-    };
-    return HomePage;
+    return DepositsMenuPage;
 }());
-HomePage = __decorate([
+DepositsMenuPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle icon-only>\n\n      <ion-icon name=\'menu\'></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Esoft Home\n\n    </ion-title>\n\n  </ion-navbar>\n\n  <!-- <ion-searchbar\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar> -->\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-grid>\n\n    <!-- <ion-row>\n\n      <ion-col col-6 (click)="goToBalance()">\n\n        <ion-card> \n\n          <img src="assets/images/us6K36jPS8FuKvuvMjGf_userprofile.png"  style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto; " />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                    \n\n              User Information\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n\n\n      <ion-col col-6 (click)="goToMiniStatementMenu()">\n\n        <ion-card> \n\n          <img src="assets/images/oZhjyj65TcWK6Bw7nSEE_memberstatistics.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                   \n\n              Member Statistics\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n     </ion-row> -->\n\n\n\n    <ion-row>\n\n      <ion-col col-6 (click)="goToBalance()">\n\n        <ion-card>\n\n          <img src="assets/images/o23OlcgsRu2IujBx4LSk_transferfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"\n\n          />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">\n\n            Check Balances\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n\n\n      <ion-col col-6 (click)="goToMiniStatementMenu()">\n\n        <ion-card>\n\n          <img src="assets/images/6SOe72BFQmz3hXCgKM7Y_ministatement.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"\n\n          />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">\n\n            Mini Statements\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col col-6 (click)="goToAtmCards()">\n\n        <ion-card>\n\n          <img src="assets/images/ZqX8xkz9RkedgYxBCdHS_withdrawfunds.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"\n\n          />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">\n\n            Linked Cards\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n\n\n\n\n      <!--\n\n      <ion-col col-6 (click)="goToMiniStatementMenu()">\n\n        <ion-card> \n\n          <img src="assets/images/VWCZHeiSR67BlPhrKNP3_Loans.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                      \n\n              Loans           \n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col> \n\n    -->\n\n    </ion-row>\n\n    <!-- \n\n     <ion-row>\n\n       <ion-col col-3></ion-col>\n\n      <ion-col col-6 (click)="goToBalance()">\n\n        <ion-card> \n\n          <img src="assets/images/pSKRSpaJQSGCCPvdDIuv_cashdeposit.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />\n\n          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                      \n\n              Security Settings       \n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-col>\n\n       <ion-col col-3></ion-col>\n\n     </ion-row> -->\n\n  </ion-grid>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\EsoftMobile\src\pages\home\home.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */]],
+        selector: 'page-deposits-menu',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\deposits-menu\deposits-menu.html"*/'<!--\n  Generated template for the DepositsMenuPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Select Category</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list list-ios>\n    <button ion-item (click)="getSavingAccounts()">\n      Savings Accounts\n    </button>\n    <button ion-item (click)="getLoanAccounts()">\n      Loans Accounts\n    </button>\n    <button ion-item (click)="getSharesAccounts()">\n      Shares Accounts\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\deposits-menu\deposits-menu.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__["a" /* CustomerDetailsserviceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-], HomePage);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_ministatement_ministatement__["a" /* MinistatementProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_ministatement_ministatement__["a" /* MinistatementProvider */]) === "function" && _c || Object])
+], DepositsMenuPage);
 
-//# sourceMappingURL=home.js.map
+var _a, _b, _c;
+//# sourceMappingURL=deposits-menu.js.map
 
 /***/ }),
 
@@ -1980,14 +2010,85 @@ HomePage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountsDetailsServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(48);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/*
+  Generated class for the AccontsDetailsServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var AccountsDetailsServiceProvider = (function () {
+    function AccountsDetailsServiceProvider(storage, http) {
+        this.storage = storage;
+        this.http = http;
+        this.endPoint = "http://localhost:53725/customers/";
+        console.log('Hello AccontsDetailsServiceProvider Provider');
+    }
+    AccountsDetailsServiceProvider.prototype.getSavingsAccountDetails = function (id) {
+        return this.http.get(this.endPoint + id + "/savings").do(function (data) {
+            data.json();
+            console.log("accounts data" + data);
+        }).map(function (res) { return res.json(); });
+    };
+    AccountsDetailsServiceProvider.prototype.getLoansAccountDetails = function (id) {
+        return this.http.get(this.endPoint + id + "/loans").do(function (data) {
+            data.json();
+            console.log("accounts data" + data);
+        }).map(function (res) { return res.json(); });
+    };
+    AccountsDetailsServiceProvider.prototype.getSharesAccountDetails = function (id) {
+        return this.http.get(this.endPoint + id + "/shares").do(function (data) {
+            data.json();
+            console.log("accounts data" + data);
+        }).map(function (res) { return res.json(); });
+    };
+    AccountsDetailsServiceProvider.prototype.registerNewUser = function (newuser) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.endPoint + "register", newuser, options).map(function (res) { return res.json(); });
+    };
+    return AccountsDetailsServiceProvider;
+}());
+AccountsDetailsServiceProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], AccountsDetailsServiceProvider);
+
+//# sourceMappingURL=acconts-details-service.js.map
+
+/***/ }),
+
+/***/ 87:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerDetailsserviceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2027,12 +2128,13 @@ var CustomerDetailsserviceProvider = (function () {
 }());
 CustomerDetailsserviceProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], CustomerDetailsserviceProvider);
 
+var _a;
 //# sourceMappingURL=customer-detailsservice.js.map
 
 /***/ })
 
-},[216]);
+},[218]);
 //# sourceMappingURL=main.js.map

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DepositTransactionPage } from '../deposit-transaction/deposit-transaction';
-import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
+//import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
+import { MinistatementProvider } from '../../providers/ministatement/ministatement';
+import { CustomerProvider } from '../../providers/customer/customer';
 
 /**
  * Generated class for the DepositsMenuPage page.
@@ -19,7 +21,7 @@ export class DepositsMenuPage {
 private customer:any
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
-     public accountdetailProv: AccountsDetailsServiceProvider,
+     public ministatementProvider: MinistatementProvider,
     ) {
   }
   ngOnInit(): void {
@@ -29,21 +31,22 @@ private customer:any
     console.log('ionViewDidLoad DepositsMenuPage');
   }
   getLoanAccounts(){ 
-    this.accountdetailProv.getLoansAccountDetails(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
+    
+    this.ministatementProvider.getLoansAccounts(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
     this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Loans Accounts",customer:this.customer});
 
   });
   }
 
   getSharesAccounts(){
-    this.accountdetailProv.getSharesAccountDetails(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
+    this.ministatementProvider.getSharesAccounts(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
     this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Shares Accounts",customer:this.customer},);
 
   });
   }
 
   getSavingAccounts(){
-    this.accountdetailProv.getSavingsAccountDetails(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
+    this.ministatementProvider.getSavingsAccounts(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
       this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Savings Accounts",customer:this.customer});
   
     });

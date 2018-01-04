@@ -16,18 +16,18 @@ import { DepositsMenuPage } from '../deposits-menu/deposits-menu';
 @Component({
   selector: 'page-deposit-main',
   templateUrl: 'deposit-main.html',
-  providers:[CustomerDetailsserviceProvider]
+  providers: [CustomerDetailsserviceProvider]
 })
 export class DepositMainPage {
   customerFormGroup: FormGroup;
   constructor(
-     public navCtrl: NavController,
-     public navParams: NavParams, 
-     public formBuilder: FormBuilder,
-     public customerDetailsserviceProvider:CustomerDetailsserviceProvider,
-     public alertCtrl: AlertController,
-    ) {
-      }
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public formBuilder: FormBuilder,
+    public customerDetailsserviceProvider: CustomerDetailsserviceProvider,
+    public alertCtrl: AlertController,
+  ) {
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DepositMainPage');
@@ -35,50 +35,73 @@ export class DepositMainPage {
 
   ngOnInit(): void {
     this.customerFormGroup = this.formBuilder.group({
-      
-      CustomerNo: ['',Validators.compose([Validators.maxLength(10), Validators.pattern('[0-9]{1,6}'), Validators.required])],
+      CustomerNo: [
+        '',
+        Validators.compose([Validators.maxLength(10),
+        Validators.pattern('[0-9]{1,6}'),
+        Validators.required])
+      ],
     });
-    }
-  submit(){
-    this.customerDetailsserviceProvider.getCustomerDetailsByNumber(this.customerFormGroup.value.CustomerNo).subscribe(resp=>{
-if(resp.ok){
- this.confirmDeposit(resp.json());
-  console.log("this is the response",resp.json());
-}
-else{
-  console.log(resp.statusText);
-}
-
-
-    });
+  }
+  submit() {
+    this.customerDetailsserviceProvider
+      .getCustomerDetailsByNumber(this.customerFormGroup.value.CustomerNo)
+      .subscribe(resp => {
+        if (resp.ok) {
+          this.confirmDeposit(resp.json());
+        }
+      },
+      err => {
+        if (err.status == 404) {
+          this.alertMemberNotFoundError(JSON.parse(err._body).message);
+        }
+      });
 
   }
-//get customer details whose account is to be Deposited
-  getCustomer(){
+  //get customer details whose account is to be Deposited
+  getCustomer() {
 
 
   }
 
-  confirmDeposit(customer:any) {
+  confirmDeposit(customer: any) {
     let alert = this.alertCtrl.create({
       title: 'Deposit Money',
-      message: 'Do you want to Deposit money to '+ customer.customerName,
+      message: 'Do you want to Deposit money to ' + customer.customerName,
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-         
+
           }
         },
         {
           text: 'Yes',
           handler: () => {
-            this.navCtrl.push(DepositsMenuPage,{customer:customer});
+            this.navCtrl.push(DepositsMenuPage, { customer: customer });
           }
         }
       ]
     });
     alert.present();
+  }
+
+  alertMemberNotFoundError(errorText: any) {
+    let alert = this.alertCtrl.create({
+      title: 'Member Not Found',
+      message: errorText,
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+
+          }
+        },
+      ]
+    });
+    alert.present();
+
   }
 }

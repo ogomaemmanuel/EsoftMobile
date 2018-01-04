@@ -27,6 +27,8 @@ import { DepositProductCategoryPage } from '../pages/deposit-product-category/de
 import { DepositsMenuPage } from '../pages/deposits-menu/deposits-menu';
 import { DepositTransactionProvider } from '../providers/deposit-transaction/deposit-transaction';
 import { DepositTransactionPage } from '../pages/deposit-transaction/deposit-transaction';
+import { DeviceInfoProvider } from '../providers/device-info/device-info';
+import { Device } from '@ionic-native/device';
 
 @NgModule({
   declarations: [
@@ -85,9 +87,11 @@ import { DepositTransactionPage } from '../pages/deposit-transaction/deposit-tra
     AccountsDetailsServiceProvider,
     MinistatementProvider,
     AtmCardsProvider,
+    Device,
     ContactUsPage,
     RegistrationPage,
     DepositTransactionProvider,
+    DeviceInfoProvider,
    
    
   ]

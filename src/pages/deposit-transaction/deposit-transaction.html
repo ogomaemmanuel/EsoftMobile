@@ -16,8 +16,8 @@
     <ion-item text-wrap>
      
       <ion-select formControlName="ProductCode" [selectOptions]="selectOptions" class="select-list"placeholder="Select Account" string="Select Account">
-          <ion-option *ngFor="let accountDetail of accountDetails" value="{{accountDetail.accountName}}">
-                 {{accountDetail.accountName}}
+          <ion-option *ngFor="let accountDetail of accountDetails" value="{{accountDetail.accountNo}}">
+                 {{accountDetail.productName}}
              </ion-option>
       </ion-select>
     </ion-item>
