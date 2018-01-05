@@ -38,6 +38,7 @@ export class DepositMainPage {
       CustomerNo: [
         '',
         Validators.compose([Validators.maxLength(10),
+        Validators.minLength(1),  
         Validators.pattern('[0-9]{1,6}'),
         Validators.required])
       ],
@@ -58,28 +59,23 @@ export class DepositMainPage {
       });
 
   }
-  //get customer details whose account is to be Deposited
-  getCustomer() {
-
-
-  }
-
   confirmDeposit(customer: any) {
     let alert = this.alertCtrl.create({
       title: 'Deposit Money',
-      message: 'Do you want to Deposit money to ' + customer.customerName,
+      message: 'Do you want to deposit money to ' + customer.customerName+"?",
       buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-
-          }
-        },
+      
         {
           text: 'Yes',
           handler: () => {
             this.navCtrl.push(DepositsMenuPage, { customer: customer });
+          }
+        },
+        {
+          text: 'No',
+          role: 'cancel',
+          handler: () => {
+
           }
         }
       ]

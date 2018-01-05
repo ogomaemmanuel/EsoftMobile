@@ -22,31 +22,28 @@ import { GreatorThanZeroValidator } from '../../commonFunctions/GreatorThanZeroV
   templateUrl: 'deposit-transaction.html',
 })
 export class DepositTransactionPage implements OnInit {
-  private accountDetails:any = [];
+  private accountDetails: any = [];
   private selectOptions: any;
   private depositFormGroup: FormGroup;
   public depositTrx: any;
-  public customer:any;
-  public trxTitle:any;
+  public customer: any;
+  public trxTitle: any;
   constructor(public navCtrl: NavController,
     public depositTransactionProvider: DepositTransactionProvider,
     public navParams: NavParams,
     public formBuilder: FormBuilder,
-    public alertCtrl:AlertController,
-    public deviceInfoProvider:DeviceInfoProvider,
+    public alertCtrl: AlertController,
+    public deviceInfoProvider: DeviceInfoProvider,
     public customerProvider: CustomerProvider,
-       
-
-
   ) {
   }
   ngOnInit(): void {
     this.accountDetails = this.navParams.get('accountDetails');
-    this.customer=this.navParams.get("customer");
-    this.trxTitle=this.navParams.get("accountCategory");
+    this.customer = this.navParams.get("customer");
+    this.trxTitle = this.navParams.get("accountCategory");
     console.log("accountDetails in deposit-transaction.ts", this.accountDetails);
     this.selectOptions = {
-      subTitle: 'Customer '+this.trxTitle+' Accounts',
+      subTitle: 'Customer ' + this.trxTitle + ' Accounts',
       mode: 'md'
     };
     this.depositFormGroup = this.formBuilder.group({
@@ -56,38 +53,38 @@ export class DepositTransactionPage implements OnInit {
     });
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DepositTransactionPage');
+
   }
   submit() {
     this.customerProvider.getLocallyStoredUser().then(user => {
       this.depositTrx = this.depositFormGroup.value;
       this.depositTrx.CustomerNo = this.navParams.get("customer").customerNo;
-      this.depositTrx.DeviceInfo=this.deviceInfoProvider.getDevice();
-      this.depositTrx.TellerLoginCode=user.loginCode;
+      this.depositTrx.DeviceInfo = this.deviceInfoProvider.getDevice();
+      this.depositTrx.TellerLoginCode = user.loginCode;
       this.depositTransactionProvider.depositCash(this.depositTrx).subscribe(res => {
-        if(res.ok){
+        if (res.ok) {
           this.showRedirectDialog();
         }
       });
     })
   }
 
-  showRedirectDialog(){
+  showRedirectDialog() {
     let alert = this.alertCtrl.create({
-      title: 'Deposit Money',
-      message: 'Transaction posted Successfully,do you want to do another transaction for '+ this.navParams.get("customer").customerName,
+      title: 'Cash Deposit',
+      message: '<p>Transaction posted successfully.</p>Do you want another transaction for ' + this.navParams.get("customer").customerName + "?",
       buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            this.navCtrl.setRoot(HomePage);
-          }
-        },
         {
           text: 'Yes',
           handler: () => {
-            this.navCtrl.push(DepositsMenuPage,{customer:this.customer});
+            this.navCtrl.push(DepositsMenuPage, { customer: this.customer });
+          }
+        },
+        {
+          text: 'No',
+          role: 'cancel',
+          handler: () => {
+            this.navCtrl.setRoot(HomePage);
           }
         }
       ]

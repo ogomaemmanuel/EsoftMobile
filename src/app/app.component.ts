@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login'
 import { HomePage } from "../pages/home/home";
-import { CustomerDetailsserviceProvider } from "../providers/customer-detailsservice/customer-detailsservice";
 import { Customer } from "../models/customer";
 import { Events, MenuController, AlertController } from 'ionic-angular';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
@@ -48,7 +47,9 @@ export class MyApp {
     this.events.subscribe("userLogedIn", (data) => {
       this.customer = data;
       if(!this.customer.isTeller){
+        if(this.pageSettings[3].page==DepositMainPage){
         this.pageSettings.splice(3,1);
+        }
       }
     });
   }

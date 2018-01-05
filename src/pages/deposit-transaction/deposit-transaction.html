@@ -15,7 +15,7 @@
   <form [formGroup]="depositFormGroup"  (ngSubmit)="submit()">
     <ion-item text-wrap>
      
-      <ion-select formControlName="ProductCode" [selectOptions]="selectOptions" class="select-list"placeholder="Select Account" string="Select Account">
+      <ion-select formControlName="ProductCode" [selectOptions]="selectOptions" class="select-list"placeholder="Select Product" string="Select Account">
           <ion-option *ngFor="let accountDetail of accountDetails" value="{{accountDetail.accountNo}}">
                  {{accountDetail.productName}}
              </ion-option>
