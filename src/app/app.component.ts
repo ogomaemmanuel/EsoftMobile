@@ -20,7 +20,7 @@ export class MyApp {
   customer: Customer = new Customer();
   rootPage: any = LoginPage;
   @ViewChild(Nav) nav: Nav;
-  pages: Array<{ title: string, component: any }>;
+  pageSettings: Array<{ title: string, page: any,icon:string }>;
   constructor(
     public menuCtrl: MenuController,
     public events: Events,
@@ -37,15 +37,23 @@ export class MyApp {
 
     });
     this.menuCtrl.swipeEnable(false)
-    this.pages = [
-      { title: 'Home', component: HomePage },
+    this.pageSettings = [
+      { title: 'Home', page: HomePage,icon:"ios-home-outline" },
+      { title: 'Settings', page: HomePage,icon:"ios-settings-outline" },
+      { title: 'Contact Us', page: ContactUsPage,icon:"ios-call-outline" },
+      { title: 'Deposit Cash', page: DepositMainPage,icon:"ios-cash-outline" },
+      { title: 'Logout', page: LoginPage,icon:"ios-log-out" },
 
     ];
     this.events.subscribe("userLogedIn", (data) => {
       this.customer = data;
+      if(!this.customer.isTeller){
+        this.pageSettings.splice(3,1);
+      }
     });
   }
   openPageHomePage() {
+    this.menuCtrl.close();
     this.nav.setRoot(HomePage);
   }
 
@@ -53,27 +61,38 @@ export class MyApp {
     this.menuCtrl.close();
     this.nav.push(ContactUsPage);
   }
+  openDepositMainPage() {
+    this.customerProvider.getLocallyStoredUser().then(user => {
+      if (user.isTeller) {
+        this.menuCtrl.close();
+        this.nav.push(DepositMainPage);
+      } else {
+
+        let alert = this.alertCtrl.create({
+          title: 'Not Teller',
+          subTitle: 'You are not authorised to deposit Cash',
+          buttons: ['Dismiss']
+        });
+        alert.present();
+      }
+    })
+  }
 
   logout() {
     this.menuCtrl.close();
     this.nav.setRoot(LoginPage);
   }
 
-  openDepositMainPage() {
-    this.customerProvider.getLocallyStoredUser().then(user => {
-      if (user.isTeller) {
-        this.menuCtrl.close();
-        this.nav.setRoot(DepositMainPage);
-      } else {
-        
-          let alert = this.alertCtrl.create({
-            title: 'Not Teller',
-            subTitle: 'You are not authorised to deposit Cash',
-            buttons: ['Dismiss']
-          });
-          alert.present();
-      }
-    })
+  openPage(pageSetting) {
+    this.menuCtrl.close();
+    if (pageSetting.page == LoginPage || pageSetting.page == LoginPage) {
+      this.nav.setRoot(pageSetting.page);
+    }
+    else if (pageSetting.page == DepositMainPage) {
+      this.openDepositMainPage()
+    }
+    else
+      this.nav.push(pageSetting.page);
   }
 }
 
