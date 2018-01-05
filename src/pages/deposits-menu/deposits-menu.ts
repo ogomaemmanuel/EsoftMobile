@@ -33,21 +33,21 @@ private customer:any
   getLoanAccounts(){ 
     
     this.ministatementProvider.getLoansAccounts(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
-    this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Loans Accounts",customer:this.customer});
+    this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Loans",customer:this.customer});
 
   });
   }
 
   getSharesAccounts(){
     this.ministatementProvider.getSharesAccounts(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
-    this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Shares Accounts",customer:this.customer},);
+    this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Shares",customer:this.customer},);
 
   });
   }
 
   getSavingAccounts(){
     this.ministatementProvider.getSavingsAccounts(this.customer.tbl_CustomerID).subscribe(accounBalances=>{
-      this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Savings Accounts",customer:this.customer});
+      this.navCtrl.push(DepositTransactionPage,{accountDetails:accounBalances,accountCategory:"Savings",customer:this.customer});
   
     });
   }

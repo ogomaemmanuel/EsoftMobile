@@ -7,6 +7,7 @@ import { DepositsMenuPage } from '../deposits-menu/deposits-menu';
 import { HomePage } from '../home/home';
 import { DeviceInfoProvider } from '../../providers/device-info/device-info';
 import { CustomerProvider } from '../../providers/customer/customer';
+import { GreatorThanZeroValidator } from '../../commonFunctions/GreatorThanZeroValidator';
 
 /**
  * Generated class for the DepositTransactionPage page.
@@ -26,6 +27,7 @@ export class DepositTransactionPage implements OnInit {
   private depositFormGroup: FormGroup;
   public depositTrx: any;
   public customer:any;
+  public trxTitle:any;
   constructor(public navCtrl: NavController,
     public depositTransactionProvider: DepositTransactionProvider,
     public navParams: NavParams,
@@ -41,18 +43,16 @@ export class DepositTransactionPage implements OnInit {
   ngOnInit(): void {
     this.accountDetails = this.navParams.get('accountDetails');
     this.customer=this.navParams.get("customer");
+    this.trxTitle=this.navParams.get("accountCategory");
     console.log("accountDetails in deposit-transaction.ts", this.accountDetails);
     this.selectOptions = {
-      subTitle: 'Customer ' + this.navParams.get("accountCategory"),
+      subTitle: 'Customer '+this.trxTitle+' Accounts',
       mode: 'md'
     };
-
     this.depositFormGroup = this.formBuilder.group({
       ProductCode: ['', Validators.compose([Validators.required])],
-      //CustomerNo: ['',Validators.compose([Validators.maxLength(10), Validators.pattern('[0-9]{1-6}'), Validators.required])],
-      TrxAmount: ['0.00', Validators.compose([Validators.pattern('^[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$'), Validators.required])],
+      TrxAmount: ['0.00', Validators.compose([GreatorThanZeroValidator.greatorThanZero, Validators.pattern('^[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$'), Validators.required])],
       TellerLoginCode: [''],
-      //idNo: ['',Validators.compose([Validators.maxLength(10), Validators.pattern('[0-9]{5-10}'), Validators.required])],
     });
   }
   ionViewDidLoad() {
