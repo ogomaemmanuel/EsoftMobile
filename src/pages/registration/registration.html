@@ -11,35 +11,15 @@
 </ion-header>
 <ion-content padding>
 
-    <form class="list" [formGroup]="registrationModelFormGroup" (ngSubmit)="submit()">
-
+  <form class="list" [formGroup]="registrationModelFormGroup" (ngSubmit)="submit()">
     <ion-item>
-      <ion-label floating>Phone No</ion-label>
-      <ion-input type="text" formControlName="MobileNo"></ion-input>
+      <ion-label floating>Member No</ion-label>
+      <ion-input type="text" formControlName="CustomerNo"></ion-input>
     </ion-item>
-
     <ion-item>
-      <ion-label floating>Full Name</ion-label>
-      <ion-input type="text" formControlName="CustomerName"></ion-input>
+      <ion-label floating>Id No</ion-label>
+      <ion-input type="text" formControlName="IdNo"></ion-input>
     </ion-item>
-
-    <ion-item>
-        <ion-label floating>Id No</ion-label>
-        <ion-input type="text" formControlName="IdNo"></ion-input>
-      </ion-item>
-          <!-- <span padding style="text-align: center" ion-text color="danger" *ngIf="!registrationModelFormGroup.controls.idNo.valid  && (registrationModelFormGroup.controls.idNo.dirty && submitAttempt)">Please enter a valid id No.</span> -->
-      <ion-item>
-          <ion-label floating>Member No</ion-label>
-          <ion-input type="text" formControlName="CustomerNo"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input type="text" formControlName="Email"></ion-input>
-          </ion-item>
-
-        </form>
-
-  <div padding>
-      <button ion-button block (click)="registerUser()">Register</button>
-    </div>
+    <button ion-button block (click)="registerUser()">Register</button>
+  </form>
 </ion-content>

@@ -48,7 +48,7 @@ export class DepositTransactionPage implements OnInit {
     };
     this.depositFormGroup = this.formBuilder.group({
       ProductCode: ['', Validators.compose([Validators.required])],
-      TrxAmount: ['0.00', Validators.compose([GreatorThanZeroValidator.greatorThanZero, Validators.pattern('^[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$'), Validators.required])],
+      TrxAmount: ['0.00', Validators.compose([GreatorThanZeroValidator.greatorThanZero,Validators.pattern('^\\d+(\\.(\\d{1,2})){0,1}$|^\\d{1,3}(,\\d{3})*(\\.\\d{1,2})*$'), Validators.required])],
       TellerLoginCode: [''],
     });
   }
@@ -90,5 +90,23 @@ export class DepositTransactionPage implements OnInit {
       ]
     });
     alert.present();
+  }
+
+  formatToCurrency(){
+  let oldTrxAmount= this.depositFormGroup.controls["TrxAmount"].value;
+  oldTrxAmount=oldTrxAmount
+
+  var formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: '',
+    minimumFractionDigits: 2,
+    // the default value for minimumFractionDigits depends on the currency
+    // and is usually already 2
+  });
+  console.log("formated amount is ",formatter.format(oldTrxAmount));
+  this.depositFormGroup.controls["TrxAmount"].setValue(formatter.format(oldTrxAmount));
+  this.depositFormGroup.controls["TrxAmount"].updateValueAndValidity();
+
+
   }
 }
