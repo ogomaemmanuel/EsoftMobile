@@ -29,6 +29,7 @@ import { DepositTransactionProvider } from '../providers/deposit-transaction/dep
 import { DepositTransactionPage } from '../pages/deposit-transaction/deposit-transaction';
 import { DeviceInfoProvider } from '../providers/device-info/device-info';
 import { Device } from '@ionic-native/device';
+import { ErrorAlertProvider } from '../providers/error-alert/error-alert';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import { Device } from '@ionic-native/device';
     RegistrationPage,
     DepositTransactionProvider,
     DeviceInfoProvider,
+    ErrorAlertProvider,
    
    
   ]

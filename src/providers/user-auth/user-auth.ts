@@ -28,6 +28,6 @@ export class UserAuthProvider implements OnInit {
   }
   public authenticateUser(pin: string, telephone: string) {
     return this.http.get("http://localhost:53725/customers/login?MobileNo=" +
-      telephone + "&Pin=" + pin).map(res => res.json());
+      telephone + "&Pin=" + pin).map(res => res);
   }
 }

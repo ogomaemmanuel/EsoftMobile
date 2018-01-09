@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserAuthProvider } from '../../providers/user-auth/user-auth';
@@ -7,6 +7,11 @@ import { Http } from '@angular/http';
 import { RegistrationPage } from '../registration/registration';
 import { HomePage } from '../home/home';
 import { ContactUsPage } from '../contact-us/contact-us';
+import { ErrorAlertProvider } from '../../providers/error-alert/error-alert';
+import { FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
+import { FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 /**
  * Generated class for the LoginPage page.
@@ -21,18 +26,27 @@ import { ContactUsPage } from '../contact-us/contact-us';
   templateUrl: 'login.html',
   providers: [UserAuthProvider]
 })
-export class LoginPage {
+export class LoginPage implements OnInit {
   public telephone: string;
   public pin: string;
-
-
+  public userLoginFormGroup:FormGroup;
   constructor(public menuCtrl: MenuController,
     public userAuthProvider: UserAuthProvider,
     public navCtrl: NavController,
     public toastCtrl: ToastController,
     public navParams: NavParams,
+    private formBuilder:FormBuilder,
+    private errorAlertProvider:ErrorAlertProvider,
     public alertCtrl: AlertController) {
     // this.menuCtrl.enabled=false;
+  }
+
+  ngOnInit(): void {
+    this.userLoginFormGroup= this.formBuilder.group({
+    MemberNo:['',Validators.compose([Validators.required,Validators.pattern('[0-9]{1,}')])],
+    Pin:['',Validators.compose([Validators.required,Validators.pattern('[0-9]{1,}')])],
+    //DeviceInfo: new FormControl('1234',Validators.compose([Validators.required])),
+    })
   }
 
   ionViewDidLoad() {
@@ -50,21 +64,17 @@ export class LoginPage {
     this.menuCtrl.swipeEnable(false)
   }
   authenticate() {
+  let mobileNo= this.userLoginFormGroup.value['MemberNo'];
+  let pin= this.userLoginFormGroup.value['Pin']
 
-    //1) Validate the user
-    //2) If valid redirect to home.
-    //var loginStatus=false;
-    this.userAuthProvider.authenticateUser(this.pin, this.telephone).subscribe(loginStatus => {
-      if (loginStatus.status ==="Success") {
-        console.log("Successful login",loginStatus);
-        this.navCtrl.setRoot(HomePage, { userId: loginStatus.user.tbl_CustomerId });
-
+    this.userAuthProvider.authenticateUser(pin, mobileNo).subscribe(loginStatus => {
+      if (loginStatus.ok) {
+        this.navCtrl.setRoot(HomePage, { userId: loginStatus.json().user.tbl_CustomerId });
       }
+    },error=>{
 
-      else {
-        console.log("Login error object",loginStatus);
-        this.presentToast(loginStatus.message)
-      }
+      console.log("login Errors are ",error._body);
+    // this.errorAlertProvider.alertError(JSON.parse(error._body));
     });
   }
   goToRegistrationPage() {

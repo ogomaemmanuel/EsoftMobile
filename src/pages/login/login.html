@@ -14,30 +14,27 @@
 
 
 <ion-content padding>
-<ion-list>
 
-  <ion-item>
-    <ion-label floating>Your Phone No</ion-label>
-    <ion-input type="text" [(ngModel)]="telephone"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label floating >Pin</ion-label>
-    <ion-input type="password" [(ngModel)]="pin"></ion-input>
-  </ion-item>
-
-</ion-list>
-
-<div>
-  <button ion-button block (click)="authenticate()">Sign In</button>
-  
-</div>
-
-<div padding>
+  <form [formGroup]="userLoginFormGroup" #userLoginForm (ngSubmit)="authenticate()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Member No</ion-label>
+        <ion-input type="text" formControlName="MemberNo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Pin</ion-label>
+        <ion-input type="password" formControlName="Pin"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div>
+      <button ion-button [disabled]="!userLoginFormGroup.valid" block (click)="authenticate()">Sign In</button>
+    </div>
+  </form>
+  <div padding>
     <!-- <button ion-button block >Sign Up</button> -->
     <button ion-button clear small style="float: left" (click)="goToRegistrationPage()">Sign Up</button>
     <button ion-button clear small style="float: left" (click)="goToContactUsPage()">Forgot Password</button>
-   <!-- <p style="text-align: center"><span ion-text color="dark" (click)="goToRegistrationPage()" >Sign Up</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <!-- <p style="text-align: center"><span ion-text color="dark" (click)="goToRegistrationPage()" >Sign Up</span>&nbsp;&nbsp;|&nbsp;&nbsp;
     <span ion-text color="dark">Forgot password?</span></p> -->
   </div>
 </ion-content>
