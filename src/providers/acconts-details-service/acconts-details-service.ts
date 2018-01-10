@@ -4,13 +4,6 @@ import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
 import { AccountDetail } from '../../models/accountDetails';
 import { EndPointHostProvider } from '../end-point-host/end-point-host';
-
-/*
-  Generated class for the AccontsDetailsServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class AccountsDetailsServiceProvider extends EndPointHostProvider {
   private endPoint: string = "customers/";
@@ -37,7 +30,9 @@ export class AccountsDetailsServiceProvider extends EndPointHostProvider {
     return this.http.post(this.endPoint + "register", newuser, options).map(res => res);
   }
   public ResetCustomerOtpPin(pinDetails: any) {
-    return this.http.post(this.endPoint +pinDetails.userId+"/set-pin ", pinDetails).map(resp => resp);
+    return this.http.post(this.endPoint + pinDetails.userId + "/set-pin ", pinDetails).map(resp => resp);
   }
-
+  public ChangeCustomerPin(pinDetails: any) {
+    return this.http.post(this.endPoint + pinDetails.userId + "/change-pin ", pinDetails).map(resp => resp);
+  }
 }

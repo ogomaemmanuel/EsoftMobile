@@ -24,7 +24,8 @@ export class ErrorAlertProvider {
     let alert = this.alertCtrl.create({
       title: title,
       message: alertMessage,
-      mode: 'md'
+      mode: 'md',
+      buttons:['ok']
     });
     alert.present();
   }

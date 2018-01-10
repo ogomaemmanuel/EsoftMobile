@@ -33,6 +33,7 @@ import { ErrorAlertProvider } from '../providers/error-alert/error-alert';
 import { ChangeOtpPage } from '../pages/change-otp/change-otp';
 import { EndPointHostProvider } from '../providers/end-point-host/end-point-host';
 import { SettingsPage } from '../pages/settings/settings';
+import { ChangePasswordPage } from '../pages/change-password/change-password';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { SettingsPage } from '../pages/settings/settings';
     DepositsMenuPage,
     DepositTransactionPage,
     ChangeOtpPage,
-    SettingsPage
+    SettingsPage,
+    ChangePasswordPage
   ],
   imports: [
     BrowserModule,
@@ -83,7 +85,8 @@ import { SettingsPage } from '../pages/settings/settings';
     DepositsMenuPage,
     DepositTransactionPage,
     ChangeOtpPage,
-    SettingsPage
+    SettingsPage,
+    ChangePasswordPage
     
   ],
   providers: [
