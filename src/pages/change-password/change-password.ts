@@ -4,6 +4,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
 import { ErrorAlertProvider } from '../../providers/error-alert/error-alert';
+import { CustomerProvider } from '../../providers/customer/customer';
 
 /**
  * Generated class for the ChangePasswordPage page.
@@ -25,7 +26,8 @@ export class ChangePasswordPage implements OnInit {
     private formBuilder: FormBuilder,
     private accountsDetailsServiceProvider: AccountsDetailsServiceProvider,
     private alertCtrl: AlertController,
-    private errorAlertProvider: ErrorAlertProvider
+    private errorAlertProvider: ErrorAlertProvider,
+    private customerProvider: CustomerProvider,
   ) {
   }
 
@@ -33,26 +35,28 @@ export class ChangePasswordPage implements OnInit {
     this.changePinFormGroup = this.formBuilder.group({
       OldPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
       NewPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
-      ConfirmPin: ['', Validators.required, Validators.pattern('[0-9]{1,}')]
+      ConfirmPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])]
     });
   }
   ionViewDidLoad() {
 
   }
   changeOldPin() {
-    this.accountsDetailsServiceProvider.ChangeCustomerPin('').subscribe(resp => {
-      if (resp.ok) {
-        let alert = this.alertCtrl.create({
-          message: "pin successfully changed",
-          buttons: ['ok']
-        })
-        alert.present();
-      }
-    }, error => {
-      this.errorAlertProvider.alertError("", "Password Update Error");
-      
+    this.customerProvider.getLocallyStoredUserId().then(userId =>{
+      let pinDetails=this.changePinFormGroup.value;
+      pinDetails.userId=userId;
+      this.accountsDetailsServiceProvider.ChangeCustomerPin(pinDetails).subscribe(resp => {
+        if (resp.ok) {
+          let alert = this.alertCtrl.create({
+            message: "pin successfully changed",
+            buttons: ['ok']
+          })
+          alert.present();
+        }
+      }, error => {
+        this.errorAlertProvider.alertError(JSON.parse(error._body),"Password Update Error");
+      })
 
     })
-
   }
 }
