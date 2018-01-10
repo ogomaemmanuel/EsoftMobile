@@ -667,6 +667,7 @@ RegistrationPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -676,6 +677,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -694,38 +696,46 @@ var ChangeOtpPage = (function () {
         this.navParams = navParams;
         this.accountsDetailsServiceProvider = accountsDetailsServiceProvider;
         this.errorAlertProvider = errorAlertProvider;
+        this.showPinError = false;
     }
     ChangeOtpPage.prototype.ionViewDidLoad = function () {
     };
     ChangeOtpPage.prototype.ngOnInit = function () {
+        this.userId = this.navParams.get("userId");
         this.otpForm = this.formBuilder1.group({
-            NewPin: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].pattern('[0-9]')])],
-            NewPinConfirm: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].pattern('[0-9]')])]
+            NewPin: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].pattern('[0-9]{1,}')])],
+            ConfirmPin: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].pattern('[0-9]{1,}')])],
         });
     };
     ChangeOtpPage.prototype.setNewPin = function () {
         var _this = this;
-        this.accountsDetailsServiceProvider.ResetCustomerOtpPin("").subscribe(function (resp) {
-            if (resp.ok) {
-            }
-        }, function (error) {
-            _this.errorAlertProvider.alertError("", "");
-        });
+        if (this.otpForm.value["NewPin"] != this.otpForm.value["ConfirmPin"]) {
+            this.showPinError = true;
+        }
+        else {
+            var pinDetails = this.otpForm.value;
+            pinDetails.userId = this.userId;
+            this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(function (resp) {
+                if (resp.ok) {
+                    console.log("New pin has been set successfully");
+                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
+                }
+            }, function (error) {
+                _this.errorAlertProvider.alertError("", "");
+            });
+        }
     };
     return ChangeOtpPage;
 }());
 ChangeOtpPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-change-otp',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/'<!--\n  Generated template for the ChangeOtpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Set One Time Pin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form [formGroup]="otpForm" (ngSubmit)="setNewPin()">\n        <ion-list>\n          <ion-item>\n            <ion-label floating>New Pin</ion-label>\n            <ion-input type="password" formControlName="NewPin"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>Re-Enter Pin</ion-label>\n            <ion-input type="password" formControlName="NewPinConfirm"></ion-input>\n          </ion-item>\n        </ion-list>\n        <div>\n          <button ion-button [disabled]="!otpForm.valid" block (click)="authenticate()">Update</button>\n        </div>\n      </form>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/,
+        selector: 'page-change-otp',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/'<!--\n  Generated template for the ChangeOtpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Set One Time Pin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form [formGroup]="otpForm"  (ngSubmit)="setNewPin()">\n        <ion-list>\n          <ion-item>\n            <ion-label floating>New Pin</ion-label>\n            <ion-input type="password" formControlName="NewPin"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>Re-Enter Pin</ion-label>\n            <ion-input type="password" formControlName="ConfirmPin"></ion-input>\n          </ion-item>\n          <!-- <ion-item *ngIf="NewPinConfirm.value==NewPin.value">\n              <p>Sorry, pins do not match!</p>\n          </ion-item> -->\n\n          {{otpFormupdate|json}}\n        </ion-list>\n        <div>\n          <button ion-button [disabled]="!otpForm.valid" block>Update</button>\n        </div>\n      </form>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__["a" /* ErrorAlertProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__["a" /* ErrorAlertProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__["a" /* ErrorAlertProvider */]) === "function" && _e || Object])
 ], ChangeOtpPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=change-otp.js.map
 
 /***/ }),
@@ -1956,7 +1966,7 @@ var AccountsDetailsServiceProvider = (function (_super) {
         return this.http.post(this.endPoint + "register", newuser, options).map(function (res) { return res; });
     };
     AccountsDetailsServiceProvider.prototype.ResetCustomerOtpPin = function (pinDetails) {
-        return this.http.post(this.endPoint + "", pinDetails).map(function (resp) { return resp; });
+        return this.http.post(this.endPoint + pinDetails.userId + "/set-pin ", pinDetails).map(function (resp) { return resp; });
     };
     return AccountsDetailsServiceProvider;
 }(__WEBPACK_IMPORTED_MODULE_4__end_point_host_end_point_host__["a" /* EndPointHostProvider */]));

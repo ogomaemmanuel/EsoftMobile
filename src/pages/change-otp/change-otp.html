@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-    <form [formGroup]="otpForm" (ngSubmit)="setNewPin()">
+    <form [formGroup]="otpForm"  (ngSubmit)="setNewPin()">
         <ion-list>
           <ion-item>
             <ion-label floating>New Pin</ion-label>
@@ -22,11 +22,16 @@
           </ion-item>
           <ion-item>
             <ion-label floating>Re-Enter Pin</ion-label>
-            <ion-input type="password" formControlName="NewPinConfirm"></ion-input>
+            <ion-input type="password" formControlName="ConfirmPin"></ion-input>
           </ion-item>
+          <!-- <ion-item *ngIf="NewPinConfirm.value==NewPin.value">
+              <p>Sorry, pins do not match!</p>
+          </ion-item> -->
+
+          {{otpFormupdate|json}}
         </ion-list>
         <div>
-          <button ion-button [disabled]="!otpForm.valid" block (click)="authenticate()">Update</button>
+          <button ion-button [disabled]="!otpForm.valid" block>Update</button>
         </div>
       </form>
 </ion-content>

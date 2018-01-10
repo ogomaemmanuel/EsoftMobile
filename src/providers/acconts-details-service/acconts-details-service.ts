@@ -37,7 +37,7 @@ export class AccountsDetailsServiceProvider extends EndPointHostProvider {
     return this.http.post(this.endPoint + "register", newuser, options).map(res => res);
   }
   public ResetCustomerOtpPin(pinDetails: any) {
-    return this.http.post(this.endPoint + "", pinDetails).map(resp => resp);
+    return this.http.post(this.endPoint +pinDetails.userId+"/set-pin ", pinDetails).map(resp => resp);
   }
 
 }

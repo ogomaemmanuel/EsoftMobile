@@ -4,6 +4,8 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
 import { ErrorAlertProvider } from '../../providers/error-alert/error-alert';
+import { PasswordValidation } from '../../commonFunctions/EqualValidator';
+import { LoginPage } from '../login/login';
 /**
  * Generated class for the ChangeOtpPage page.
  *
@@ -18,8 +20,8 @@ import { ErrorAlertProvider } from '../../providers/error-alert/error-alert';
 })
 export class ChangeOtpPage implements OnInit {
   public otpForm: FormGroup;
-
-
+  public showPinError: boolean = false;
+  private userId: string;
   constructor(private formBuilder1: FormBuilder,
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -31,25 +33,33 @@ export class ChangeOtpPage implements OnInit {
 
   }
   ngOnInit(): void {
+    this.userId = this.navParams.get("userId");
     this.otpForm = this.formBuilder1.group({
-      NewPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]')])],
-      NewPinConfirm: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]')])]
-
+      NewPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
+      ConfirmPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
+      //showPinError:[false]
     })
-
   }
 
   setNewPin() {
-    this.accountsDetailsServiceProvider.ResetCustomerOtpPin("").subscribe(resp => {
-      if (resp.ok) {
+    if (this.otpForm.value["NewPin"] != this.otpForm.value["ConfirmPin"]) {
+      this.showPinError = true;
+    }
+    else {
+      let pinDetails=this.otpForm.value;
+      pinDetails.userId=this.userId;
 
-        
+      this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(resp => {
+        if (resp.ok) {
 
-      }
+          console.log("New pin has been set successfully")
+          this.navCtrl.setRoot(LoginPage);
+        }
 
-    }, error => {
-      this.errorAlertProvider.alertError("","");
-    })
+      }, error => {
+        this.errorAlertProvider.alertError("", "");
+      })
+    }
 
 
   }
