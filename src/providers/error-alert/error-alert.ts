@@ -15,13 +15,14 @@ export class ErrorAlertProvider {
   constructor(private alertCtrl: AlertController) {
   }
 
-  public alertError(errorMessage: string) {
-    this.buildErrorMessage(errorMessage);
+  public alertError(errorMessage: string,title:string) {
+    this.buildErrorMessage(errorMessage,title);
   }
-  private buildErrorMessage(alertMessage: string) {
+
+  private buildErrorMessage(alertMessage: string,title:string) {
     console.log("alert Message is ", alertMessage);
     let alert = this.alertCtrl.create({
-      title: "Registration Error",
+      title: title,
       message: alertMessage,
       mode: 'md'
     });

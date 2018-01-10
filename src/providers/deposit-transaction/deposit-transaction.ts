@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http,Headers, RequestOptions  } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { EndPointHostProvider } from '../end-point-host/end-point-host';
 
 /*
   Generated class for the DepositTransactionProvider provider.
@@ -9,9 +10,11 @@ import 'rxjs/add/operator/map';
   and Angular DI.
 */
 @Injectable()
-export class DepositTransactionProvider {
-  endPoint: string = "http://localhost:53725/tellers/";
+export class DepositTransactionProvider extends EndPointHostProvider {
+  endPoint: string = "tellers/";
   constructor(public http: Http) {
+    super();
+    this.endPoint= this.getHost()+this.endPoint;
     console.log('Hello DepositTransactionProvider Provider');
   }
 

@@ -5,6 +5,7 @@ import { NavController } from 'ionic-angular';
 import { Events } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 import { HomePage } from "../../pages/home/home";
+import { EndPointHostProvider } from '../end-point-host/end-point-host';
 
 /*
   Generated class for the UserAuthProvider provider.
@@ -14,12 +15,15 @@ import { UserAuthProvider } from '../providers/user-auth/user-auth';
 */
 
 @Injectable()
-export class UserAuthProvider implements OnInit {
+export class UserAuthProvider extends EndPointHostProvider implements OnInit {
   userId: string = "7e8a41b8-cd73-4cee-956a-4ae693b8cf06";
+  private endpoint:string;
   constructor(
     public events: Events,
     public http: Http, public navController: NavController,
     public alertCtrl: AlertController) {
+      super();
+      this.endpoint= this.getHost();
     console.log('Hello UserAuthProvider Provider');
   }
 
@@ -27,7 +31,7 @@ export class UserAuthProvider implements OnInit {
 
   }
   public authenticateUser(pin: string, telephone: string) {
-    return this.http.get("http://localhost:53725/customers/login?MobileNo=" +
+    return this.http.get(this.endpoint+"customers/login?MobileNo=" +
       telephone + "&Pin=" + pin).map(res => res);
   }
 }

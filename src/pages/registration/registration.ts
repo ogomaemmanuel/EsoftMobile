@@ -77,12 +77,14 @@ export class RegistrationPage implements OnInit {
         }
       }, error => {
         if (error.status == 400) {
+
           let erroMessages = JSON.parse(error._body);
           this.alertErrorMessage(erroMessages);
         }
         else {
           this.alertErrorMessage("There was an error in Registration,retry or visit your nearest branch for help");
         }
+        
       });
   }
 

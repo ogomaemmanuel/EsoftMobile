@@ -30,6 +30,8 @@ import { DepositTransactionPage } from '../pages/deposit-transaction/deposit-tra
 import { DeviceInfoProvider } from '../providers/device-info/device-info';
 import { Device } from '@ionic-native/device';
 import { ErrorAlertProvider } from '../providers/error-alert/error-alert';
+import { ChangeOtpPage } from '../pages/change-otp/change-otp';
+import { EndPointHostProvider } from '../providers/end-point-host/end-point-host';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { ErrorAlertProvider } from '../providers/error-alert/error-alert';
     DepositProductCategoryPage,
     DepositsMenuPage,
     DepositTransactionPage,
+    ChangeOtpPage,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import { ErrorAlertProvider } from '../providers/error-alert/error-alert';
     //one to be reomoved
     DepositProductCategoryPage,
     DepositsMenuPage,
-    DepositTransactionPage
+    DepositTransactionPage,
+    ChangeOtpPage
     
   ],
   providers: [
@@ -94,6 +98,7 @@ import { ErrorAlertProvider } from '../providers/error-alert/error-alert';
     DepositTransactionProvider,
     DeviceInfoProvider,
     ErrorAlertProvider,
+    EndPointHostProvider,
    
    
   ]

@@ -12,6 +12,7 @@ import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { ChangeOtpPage } from '../change-otp/change-otp';
 
 /**
  * Generated class for the LoginPage page.
@@ -29,23 +30,23 @@ import { Validators } from '@angular/forms';
 export class LoginPage implements OnInit {
   public telephone: string;
   public pin: string;
-  public userLoginFormGroup:FormGroup;
+  public userLoginFormGroup: FormGroup;
   constructor(public menuCtrl: MenuController,
     public userAuthProvider: UserAuthProvider,
     public navCtrl: NavController,
     public toastCtrl: ToastController,
     public navParams: NavParams,
-    private formBuilder:FormBuilder,
-    private errorAlertProvider:ErrorAlertProvider,
+    private formBuilder: FormBuilder,
+    private errorAlertProvider: ErrorAlertProvider,
     public alertCtrl: AlertController) {
     // this.menuCtrl.enabled=false;
   }
 
   ngOnInit(): void {
-    this.userLoginFormGroup= this.formBuilder.group({
-    MemberNo:['',Validators.compose([Validators.required,Validators.pattern('[0-9]{1,}')])],
-    Pin:['',Validators.compose([Validators.required,Validators.pattern('[0-9]{1,}')])],
-    //DeviceInfo: new FormControl('1234',Validators.compose([Validators.required])),
+    this.userLoginFormGroup = this.formBuilder.group({
+      MemberNo: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
+      Pin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
+      DeviceInfo: new FormControl('1234', Validators.compose([Validators.required])),
     })
   }
 
@@ -55,7 +56,6 @@ export class LoginPage implements OnInit {
 
   }
   ionViewWillEnter() {
-
     this.menuCtrl.swipeEnable(false)
   }
 
@@ -64,31 +64,39 @@ export class LoginPage implements OnInit {
     this.menuCtrl.swipeEnable(false)
   }
   authenticate() {
-  let mobileNo= this.userLoginFormGroup.value['MemberNo'];
-  let pin= this.userLoginFormGroup.value['Pin']
+    let mobileNo = this.userLoginFormGroup.value['MemberNo'];
+    let pin = this.userLoginFormGroup.value['Pin']
 
     this.userAuthProvider.authenticateUser(pin, mobileNo).subscribe(loginStatus => {
       if (loginStatus.ok) {
-        this.navCtrl.setRoot(HomePage, { userId: loginStatus.json().user.tbl_CustomerId });
+       if (loginStatus.json().user.otPwrd)
+          this.navCtrl.push(ChangeOtpPage, { userId: loginStatus.json().user.tbl_CustomerId });
+        else
+          this.navCtrl.setRoot(HomePage, { userId: loginStatus.json().user.tbl_CustomerId });
       }
-    },error=>{
+    }, error => {
+      if (error.status == 400) {
+        console.log("login Errors are ", error._body);
+        this.errorAlertProvider.alertError(JSON.parse(error._body), "Login Error");
+      }
+      else {
+        this.errorAlertProvider.alertError("Could not login, retry or contact your nearest branch", "Login Error");
+      }
 
-      console.log("login Errors are ",error._body);
-    // this.errorAlertProvider.alertError(JSON.parse(error._body));
     });
   }
   goToRegistrationPage() {
     this.navCtrl.push(RegistrationPage)
   }
 
-  goToContactUsPage(){
+  goToContactUsPage() {
     this.navCtrl.push(ContactUsPage);
   }
   presentToast(message: string) {
     let toast = this.toastCtrl.create({
       message: message,
       duration: 3000,
-      position:'middle'
+      position: 'middle'
     });
     toast.present();
   }
