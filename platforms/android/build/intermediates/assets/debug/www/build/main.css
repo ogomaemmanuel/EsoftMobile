@@ -25198,3 +25198,15 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-deposit-transaction .select-list {
+  max-width: 100% !important;
+}
+
+page-deposit-transaction .alert-md .alert-sub-title {
+  font-size: 3px !important;
+}
+
+page-deposit-transaction .alert-md .alert-message {
+  max-height: 2px !important;
+}

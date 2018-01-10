@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 305:
+/***/ 304:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MinistatementMenuPageModule", function() { return MinistatementMenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MinistatementPageModule", function() { return MinistatementPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ministatement_menu__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ministatement__ = __webpack_require__(116);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MinistatementMenuPageModule = (function () {
-    function MinistatementMenuPageModule() {
+var MinistatementPageModule = (function () {
+    function MinistatementPageModule() {
     }
-    return MinistatementMenuPageModule;
+    return MinistatementPageModule;
 }());
-MinistatementMenuPageModule = __decorate([
+MinistatementPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__ministatement_menu__["a" /* MinistatementMenuPage */],
+            __WEBPACK_IMPORTED_MODULE_2__ministatement__["a" /* MinistatementPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ministatement_menu__["a" /* MinistatementMenuPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ministatement__["a" /* MinistatementPage */]),
         ],
     })
-], MinistatementMenuPageModule);
+], MinistatementPageModule);
 
-//# sourceMappingURL=ministatement-menu.module.js.map
+//# sourceMappingURL=ministatement.module.js.map
 
 /***/ })
 

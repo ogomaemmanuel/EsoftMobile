@@ -19,6 +19,7 @@ import { LoginPage } from '../login/login';
   templateUrl: 'change-otp.html',
 })
 export class ChangeOtpPage implements OnInit {
+  
   public otpForm: FormGroup;
   public showPinError: boolean = false;
   private userId: string;
@@ -48,10 +49,8 @@ export class ChangeOtpPage implements OnInit {
     else {
       let pinDetails=this.otpForm.value;
       pinDetails.userId=this.userId;
-
       this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(resp => {
         if (resp.ok) {
-
           console.log("New pin has been set successfully")
           this.navCtrl.setRoot(LoginPage);
         }

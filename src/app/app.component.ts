@@ -9,6 +9,7 @@ import { Events, MenuController, AlertController } from 'ionic-angular';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { DepositMainPage } from '../pages/deposit-main/deposit-main';
 import { CustomerProvider } from '../providers/customer/customer';
+import { SettingsPage } from '../pages/settings/settings';
 
 @Component({
   templateUrl: 'app.html',
@@ -38,7 +39,7 @@ export class MyApp {
     this.menuCtrl.swipeEnable(false)
     this.pageSettings = [
       { title: 'Home', page: HomePage,icon:"ios-home-outline" },
-      { title: 'Settings', page: HomePage,icon:"ios-settings-outline" },
+      { title: 'Settings', page: SettingsPage,icon:"ios-settings-outline" },
       { title: 'Contact Us', page: ContactUsPage,icon:"ios-call-outline" },
       { title: 'Deposit Cash', page: DepositMainPage,icon:"ios-cash-outline" },
       { title: 'Logout', page: LoginPage,icon:"ios-log-out" },

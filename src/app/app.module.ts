@@ -32,6 +32,7 @@ import { Device } from '@ionic-native/device';
 import { ErrorAlertProvider } from '../providers/error-alert/error-alert';
 import { ChangeOtpPage } from '../pages/change-otp/change-otp';
 import { EndPointHostProvider } from '../providers/end-point-host/end-point-host';
+import { SettingsPage } from '../pages/settings/settings';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { EndPointHostProvider } from '../providers/end-point-host/end-point-host
     DepositsMenuPage,
     DepositTransactionPage,
     ChangeOtpPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,8 @@ import { EndPointHostProvider } from '../providers/end-point-host/end-point-host
     DepositProductCategoryPage,
     DepositsMenuPage,
     DepositTransactionPage,
-    ChangeOtpPage
+    ChangeOtpPage,
+    SettingsPage
     
   ],
   providers: [
