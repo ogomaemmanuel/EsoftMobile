@@ -7,39 +7,14 @@
       Esoft Home
     </ion-title>
     <ion-buttons end>
-      <button> <ion-icon ios="ios-more" md="md-more"></ion-icon></button>
+      <button (click)="presentExtraMenuPopover($event)">
+        <ion-icon ios="ios-more" md="md-more"></ion-icon>
+      </button>
     </ion-buttons>
-    
   </ion-navbar>
-  <!-- <ion-searchbar
-  [showCancelButton]="shouldShowCancel"
-  (ionInput)="onInput($event)"
-  (ionCancel)="onCancel($event)">
-</ion-searchbar> -->
 </ion-header>
-
 <ion-content>
   <ion-grid>
-    <!-- <ion-row>
-      <ion-col col-6 (click)="goToBalance()">
-        <ion-card> 
-          <img src="assets/images/us6K36jPS8FuKvuvMjGf_userprofile.png"  style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto; " />
-          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                    
-              User Information
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-
-      <ion-col col-6 (click)="goToMiniStatementMenu()">
-        <ion-card> 
-          <img src="assets/images/oZhjyj65TcWK6Bw7nSEE_memberstatistics.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />
-          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                   
-              Member Statistics
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-     </ion-row> -->
-
     <ion-row>
       <ion-col col-6 (click)="goToBalance()">
         <ion-card>
@@ -72,32 +47,7 @@
           </ion-card-header>
         </ion-card>
       </ion-col>
-
-
-      <!--
-      <ion-col col-6 (click)="goToMiniStatementMenu()">
-        <ion-card> 
-          <img src="assets/images/VWCZHeiSR67BlPhrKNP3_Loans.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />
-          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                      
-              Loans           
-          </ion-card-header>
-        </ion-card>
-      </ion-col> 
-    -->
     </ion-row>
-    <!-- 
-     <ion-row>
-       <ion-col col-3></ion-col>
-      <ion-col col-6 (click)="goToBalance()">
-        <ion-card> 
-          <img src="assets/images/pSKRSpaJQSGCCPvdDIuv_cashdeposit.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" />
-          <ion-card-header style="text-align:center; font-size:10px; width:100%; border-top:1px solid #ddd;">                      
-              Security Settings       
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-       <ion-col col-3></ion-col>
-     </ion-row> -->
   </ion-grid>
 
 </ion-content>

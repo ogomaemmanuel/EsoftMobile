@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 316:
+/***/ 315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepositMainPageModule", function() { return DepositMainPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepositProductCategoryPageModule", function() { return DepositProductCategoryPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__deposit_main__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__deposit_product_category__ = __webpack_require__(223);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DepositMainPageModule = (function () {
-    function DepositMainPageModule() {
+var DepositProductCategoryPageModule = (function () {
+    function DepositProductCategoryPageModule() {
     }
-    return DepositMainPageModule;
+    return DepositProductCategoryPageModule;
 }());
-DepositMainPageModule = __decorate([
+DepositProductCategoryPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__deposit_main__["a" /* DepositMainPage */],
+            __WEBPACK_IMPORTED_MODULE_2__deposit_product_category__["a" /* DepositProductCategoryPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__deposit_main__["a" /* DepositMainPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__deposit_product_category__["a" /* DepositProductCategoryPage */]),
         ],
     })
-], DepositMainPageModule);
+], DepositProductCategoryPageModule);
 
-//# sourceMappingURL=deposit-main.module.js.map
+//# sourceMappingURL=deposit-product-category.module.js.map
 
 /***/ })
 

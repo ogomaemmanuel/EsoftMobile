@@ -34,6 +34,7 @@ import { ChangeOtpPage } from '../pages/change-otp/change-otp';
 import { EndPointHostProvider } from '../providers/end-point-host/end-point-host';
 import { SettingsPage } from '../pages/settings/settings';
 import { ChangePasswordPage } from '../pages/change-password/change-password';
+import { ExtraMenuPopoverPage } from '../pages/extra-menu-popover/extra-menu-popover';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ChangePasswordPage } from '../pages/change-password/change-password';
     DepositTransactionPage,
     ChangeOtpPage,
     SettingsPage,
-    ChangePasswordPage
+    ChangePasswordPage,
+    ExtraMenuPopoverPage
   ],
   imports: [
     BrowserModule,
@@ -86,7 +88,8 @@ import { ChangePasswordPage } from '../pages/change-password/change-password';
     DepositTransactionPage,
     ChangeOtpPage,
     SettingsPage,
-    ChangePasswordPage
+    ChangePasswordPage,
+    ExtraMenuPopoverPage
     
   ],
   providers: [

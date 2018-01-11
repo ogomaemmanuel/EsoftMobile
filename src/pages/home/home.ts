@@ -7,6 +7,8 @@ import { Events, AlertController, LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { MinistatementMenuPage } from '../ministatement-menu/ministatement-menu';
 import { AtmCardsPage } from '../atm-cards/atm-cards';
+import { PopoverController } from 'ionic-angular/components/popover/popover-controller';
+import { ExtraMenuPopoverPage } from '../extra-menu-popover/extra-menu-popover';
 export interface PageInterface {
   title: string;
   pageName: string;
@@ -23,30 +25,37 @@ export interface PageInterface {
 export class HomePage implements OnInit {
 
   private customer: Customer;
-  constructor(public menuCtrl: MenuController, public storage: Storage, public loadingCtrl: LoadingController, public events: Events, public customerDetPro: CustomerDetailsserviceProvider, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public menuCtrl: MenuController,
+    public storage: Storage,
+    public loadingCtrl: LoadingController,
+    public events: Events,
+    public customerDetPro: CustomerDetailsserviceProvider,
+    public navCtrl: NavController,
+    private popoverCtrl:PopoverController,
+    public navParams: NavParams) {
 
     //this.menuCtrl.enabled(true);
 
   }
   ionViewWillEnter() {
-   
+
     this.menuCtrl.swipeEnable(true)
   }
   ngOnInit(): void {
     var userId = this.navParams.get('userId');
-    console.log("the userId is ",userId);
-   if(userId !==undefined){
-    let loader = this.loadingCtrl.create({
-      content: "Please wait...",
-    });
-    loader.present();
-    this.customerDetPro.getCustumerDetails(userId).subscribe(data => {
-      this.customer = data;
-      this.storage.set("customerDetails", JSON.stringify(this.customer))
-      this.events.publish("userLogedIn", this.customer);
-      loader.dismiss();
-    });
-  }
+    console.log("the userId is ", userId);
+    if (userId !== undefined) {
+      let loader = this.loadingCtrl.create({
+        content: "Please wait...",
+      });
+      loader.present();
+      this.customerDetPro.getCustumerDetails(userId).subscribe(data => {
+        this.customer = data;
+        this.storage.set("customerDetails", JSON.stringify(this.customer))
+        this.events.publish("userLogedIn", this.customer);
+        loader.dismiss();
+      });
+    }
   }
 
   goToBalance() {
@@ -59,6 +68,12 @@ export class HomePage implements OnInit {
 
   goToAtmCards() {
     this.navCtrl.push(AtmCardsPage);
+  }
+  presentExtraMenuPopover(event:any){
+    let popover = this.popoverCtrl.create(ExtraMenuPopoverPage);
+    popover.present({
+      ev: event
+    });
   }
 
 }

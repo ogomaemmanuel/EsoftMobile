@@ -6,6 +6,7 @@ import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-
 import { ErrorAlertProvider } from '../../providers/error-alert/error-alert';
 import { PasswordValidation } from '../../commonFunctions/EqualValidator';
 import { LoginPage } from '../login/login';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 /**
  * Generated class for the ChangeOtpPage page.
  *
@@ -26,6 +27,7 @@ export class ChangeOtpPage implements OnInit {
   constructor(private formBuilder1: FormBuilder,
     public navCtrl: NavController,
     public navParams: NavParams,
+    private alertCtrl:AlertController,
     public accountsDetailsServiceProvider: AccountsDetailsServiceProvider,
     private errorAlertProvider: ErrorAlertProvider
   ) {
@@ -52,9 +54,16 @@ export class ChangeOtpPage implements OnInit {
       this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(resp => {
         if (resp.ok) {
           console.log("New pin has been set successfully")
-          this.navCtrl.setRoot(LoginPage);
+          this.alertCtrl.create({
+            message:"New pin has been set successfully",
+            buttons:[{
+              text:'ok',
+              handler:()=>{
+                this.navCtrl.setRoot(LoginPage);
+              }
+            }]
+          })
         }
-
       }, error => {
         this.errorAlertProvider.alertError("", "");
       })

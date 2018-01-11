@@ -11,11 +11,11 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class EndPointHostProvider {
 private devHost:string="http://localhost:53725/"
-private productionHost:string="http://192.168.0.213:7010/EsoftMobileApi_Published/"
+private  productionHost:string="http://192.168.0.213:7010/EsoftMobileApi_Published/"
   constructor() {
   }
 
   public  getHost():string{
-     return this.devHost;
+     return this.productionHost;
   }
 }
