@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform, LoadingController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UserAuthProvider } from '../../providers/user-auth/user-auth';
 import { AlertController, MenuController, ToastController } from 'ionic-angular';
@@ -39,6 +39,7 @@ export class LoginPage implements OnInit {
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private errorAlertProvider: ErrorAlertProvider,
+    private  loadingCtrl: LoadingController,
     public alertCtrl: AlertController) {
     // this.menuCtrl.enabled=false;
   }
@@ -67,17 +68,21 @@ export class LoginPage implements OnInit {
   authenticate() {
     let mobileNo = this.userLoginFormGroup.value['MemberNo'];
     let pin = this.userLoginFormGroup.value['Pin']
-
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+    });
+    loader.present();
     this.userAuthProvider.authenticateUser(pin, mobileNo).subscribe(loginStatus => {
       if (loginStatus.ok) {
+        loader.dismiss();
        if (loginStatus.json().user.otPwrd)
           this.navCtrl.push(ChangeOtpPage, { userId: loginStatus.json().user.tbl_CustomerId });
         else
           this.navCtrl.setRoot(HomePage, { userId: loginStatus.json().user.tbl_CustomerId });
       }
     }, error => {
+      loader.dismiss();
       if (error.status == 400) {
-        console.log("login Errors are ", error._body);
         this.errorAlertProvider.alertError(JSON.parse(error._body), "Login Error");
       }
       else {

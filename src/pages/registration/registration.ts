@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController, ToastController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, ToastController, AlertController, LoadingController } from 'ionic-angular';
 import { RegistrationModel } from "../../models/registrationModel";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
@@ -35,6 +35,7 @@ export class RegistrationPage implements OnInit {
     public toastCtrl: ToastController,
     private alertCtrl: AlertController,
     private errorAlertProvider: ErrorAlertProvider,
+    private  loadingCtrl: LoadingController,
     private device: Device,
   ) {
 
@@ -62,11 +63,16 @@ export class RegistrationPage implements OnInit {
     this.menuCtrl.swipeEnable(false)
   }
   submit() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+    });
+    loader.present();
     this.submitAttempt = true;
     let registrationDetails = this.registrationModelFormGroup.value;
     registrationDetails.DeviceInfo = this.device.uuid;
     this.accountsDetailsServiceProvider.registerNewUser(registrationDetails)
       .subscribe(resp => {
+        loader.dismiss();
         if (resp.ok) {
           let alert = this.alertCtrl.create({
             message: resp.json(),
@@ -84,6 +90,7 @@ export class RegistrationPage implements OnInit {
           alert.present();
         }
       }, error => {
+        loader.dismiss();
         if (error.status == 400) {
 
           let erroMessages = JSON.parse(error._body);

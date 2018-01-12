@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
@@ -25,6 +25,7 @@ export class ChangePasswordPage implements OnInit {
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private accountsDetailsServiceProvider: AccountsDetailsServiceProvider,
+    private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
     private errorAlertProvider: ErrorAlertProvider,
     private customerProvider: CustomerProvider,
@@ -42,11 +43,16 @@ export class ChangePasswordPage implements OnInit {
 
   }
   changeOldPin() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+    });
+    loader.present();
     this.customerProvider.getLocallyStoredUserId().then(userId =>{
       let pinDetails=this.changePinFormGroup.value;
       pinDetails.userId=userId;
       this.accountsDetailsServiceProvider.ChangeCustomerPin(pinDetails).subscribe(resp => {
         if (resp.ok) {
+          loader.dismiss();
           let alert = this.alertCtrl.create({
             message: "pin successfully changed",
             buttons: ['ok']
@@ -54,6 +60,7 @@ export class ChangePasswordPage implements OnInit {
           alert.present();
         }
       }, error => {
+        loader.dismiss();
         this.errorAlertProvider.alertError(JSON.parse(error._body),"Password Update Error");
       })
 

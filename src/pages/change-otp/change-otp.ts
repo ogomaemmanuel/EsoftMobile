@@ -7,6 +7,7 @@ import { ErrorAlertProvider } from '../../providers/error-alert/error-alert';
 import { PasswordValidation } from '../../commonFunctions/EqualValidator';
 import { LoginPage } from '../login/login';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import { LoadingController } from 'ionic-angular';
 /**
  * Generated class for the ChangeOtpPage page.
  *
@@ -29,7 +30,8 @@ export class ChangeOtpPage implements OnInit {
     public navParams: NavParams,
     private alertCtrl:AlertController,
     public accountsDetailsServiceProvider: AccountsDetailsServiceProvider,
-    private errorAlertProvider: ErrorAlertProvider
+    private errorAlertProvider: ErrorAlertProvider,
+    private loaderCtrl:LoadingController
   ) {
   }
   ionViewDidLoad() {
@@ -49,11 +51,15 @@ export class ChangeOtpPage implements OnInit {
       this.showPinError = true;
     }
     else {
+      let loader = this.loaderCtrl.create({
+        content:"loading ...."
+      })
+      loader.present();
       let pinDetails=this.otpForm.value;
       pinDetails.userId=this.userId;
       this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(resp => {
         if (resp.ok) {
-          console.log("New pin has been set successfully")
+          loader.dismiss();
           this.alertCtrl.create({
             message:"New pin has been set successfully",
             buttons:[{
@@ -65,6 +71,7 @@ export class ChangeOtpPage implements OnInit {
           })
         }
       }, error => {
+        loader.dismiss();
         this.errorAlertProvider.alertError("", "");
       })
     }

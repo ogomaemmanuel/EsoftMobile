@@ -49,15 +49,15 @@ export class HomePage implements OnInit {
     var userId = this.navParams.get('userId');
     console.log("the userId is ", userId);
     if (userId !== undefined) {
-      let loader = this.loadingCtrl.create({
+      /* let loader = this.loadingCtrl.create({
         content: "Please wait...",
       });
-      loader.present();
+      loader.present(); */
       this.customerDetPro.getCustumerDetails(userId).subscribe(data => {
         this.customer = data;
         this.storage.set("customerDetails", JSON.stringify(this.customer))
         this.events.publish("userLogedIn", this.customer);
-        loader.dismiss();
+        //loader.dismiss();
       });
       this.getCompanyName();
     }
