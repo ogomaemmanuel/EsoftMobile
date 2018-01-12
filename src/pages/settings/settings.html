@@ -13,7 +13,7 @@
     <ion-list list-ios>
     <ion-item>
         <ion-label>Deactivate Account</ion-label>
-        <ion-toggle disabled checked="false"></ion-toggle>
+        <ion-toggle toggle-ios-background-color-on checked="false"(ionChange)="showDeactivatePrompt()"></ion-toggle>
       </ion-item>
       <ion-item>
       <button ion-item (click)="OpenChangePasswordPage()">

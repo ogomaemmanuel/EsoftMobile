@@ -35,10 +35,17 @@ export class AccountsDetailsServiceProvider extends EndPointHostProvider {
   public ChangeCustomerPin(pinDetails: any) {
     return this.http.post(this.endPoint + pinDetails.userId + "/change-pin ", pinDetails).map(resp => resp);
   }
-  public SubmitForgotPasswordDetails(pidResetDetails:any){
+  public SubmitForgotPasswordDetails(pidResetDetails: any) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
-    return this.http.post(this.endPoint+"forgot-pass",pidResetDetails,options);
+    return this.http.post(this.endPoint + "forgot-pass", pidResetDetails, options);
+  }
+
+  public DeactivateAccount(userId: any) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers: headers });
+    return this.http.put(this.endPoint + userId + "/deactivate", {},options);
   }
 }
