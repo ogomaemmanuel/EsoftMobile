@@ -9,6 +9,7 @@ import { MinistatementMenuPage } from '../ministatement-menu/ministatement-menu'
 import { AtmCardsPage } from '../atm-cards/atm-cards';
 import { PopoverController } from 'ionic-angular/components/popover/popover-controller';
 import { ExtraMenuPopoverPage } from '../extra-menu-popover/extra-menu-popover';
+import { CompanyDetailsProvider } from '../../providers/company-details/company-details';
 export interface PageInterface {
   title: string;
   pageName: string;
@@ -25,22 +26,25 @@ export interface PageInterface {
 export class HomePage implements OnInit {
 
   private customer: Customer;
+  public companyName: string="";
   constructor(public menuCtrl: MenuController,
     public storage: Storage,
     public loadingCtrl: LoadingController,
     public events: Events,
     public customerDetPro: CustomerDetailsserviceProvider,
     public navCtrl: NavController,
-    private popoverCtrl:PopoverController,
+    private popoverCtrl: PopoverController,
+    private companyDetailsProvider: CompanyDetailsProvider,
     public navParams: NavParams) {
 
     //this.menuCtrl.enabled(true);
 
   }
   ionViewWillEnter() {
-
     this.menuCtrl.swipeEnable(true)
   }
+
+
   ngOnInit(): void {
     var userId = this.navParams.get('userId');
     console.log("the userId is ", userId);
@@ -69,11 +73,16 @@ export class HomePage implements OnInit {
   goToAtmCards() {
     this.navCtrl.push(AtmCardsPage);
   }
-  presentExtraMenuPopover(event:any){
+  presentExtraMenuPopover(event: any) {
     let popover = this.popoverCtrl.create(ExtraMenuPopoverPage);
     popover.present({
       ev: event
     });
   }
 
+  getCompanyName() {
+    this.companyDetailsProvider.getCompanyName().subscribe(resp => {
+      this.companyName = resp.json();
+    }, error => { })
+  }
 }

@@ -33,9 +33,9 @@ export class ChangePasswordPage implements OnInit {
 
   ngOnInit(): void {
     this.changePinFormGroup = this.formBuilder.group({
-      OldPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
-      NewPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
-      ConfirmPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])]
+      OldPin: ['', Validators.compose([Validators.required,Validators.maxLength(4),Validators.minLength(4), Validators.pattern('[0-9]{1,}')])],
+      NewPin: ['', Validators.compose([Validators.required,Validators.maxLength(4),Validators.minLength(4), Validators.pattern('[0-9]{1,}')])],
+      ConfirmPin: ['', Validators.compose([Validators.required,Validators.maxLength(4),Validators.minLength(4), Validators.pattern('[0-9]{1,}')])]
     });
   }
   ionViewDidLoad() {

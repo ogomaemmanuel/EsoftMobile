@@ -35,6 +35,8 @@ import { EndPointHostProvider } from '../providers/end-point-host/end-point-host
 import { SettingsPage } from '../pages/settings/settings';
 import { ChangePasswordPage } from '../pages/change-password/change-password';
 import { ExtraMenuPopoverPage } from '../pages/extra-menu-popover/extra-menu-popover';
+import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
+import { CompanyDetailsProvider } from '../providers/company-details/company-details';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { ExtraMenuPopoverPage } from '../pages/extra-menu-popover/extra-menu-pop
     ChangeOtpPage,
     SettingsPage,
     ChangePasswordPage,
-    ExtraMenuPopoverPage
+    ExtraMenuPopoverPage,
+    ForgotPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -89,7 +92,8 @@ import { ExtraMenuPopoverPage } from '../pages/extra-menu-popover/extra-menu-pop
     ChangeOtpPage,
     SettingsPage,
     ChangePasswordPage,
-    ExtraMenuPopoverPage
+    ExtraMenuPopoverPage,
+    ForgotPasswordPage
     
   ],
   providers: [
@@ -108,6 +112,7 @@ import { ExtraMenuPopoverPage } from '../pages/extra-menu-popover/extra-menu-pop
     DeviceInfoProvider,
     ErrorAlertProvider,
     EndPointHostProvider,
+    CompanyDetailsProvider,
    
    
   ]

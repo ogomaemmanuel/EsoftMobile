@@ -38,8 +38,8 @@ export class ChangeOtpPage implements OnInit {
   ngOnInit(): void {
     this.userId = this.navParams.get("userId");
     this.otpForm = this.formBuilder1.group({
-      NewPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
-      ConfirmPin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
+      NewPin: ['', Validators.compose([Validators.required,Validators.minLength(4),Validators.maxLength(4), Validators.pattern('[0-9]{1,}')])],
+      ConfirmPin: ['', Validators.compose([Validators.required,Validators.maxLength(4),Validators.minLength(4), Validators.pattern('[0-9]{1,}')])],
       //showPinError:[false]
     })
   }

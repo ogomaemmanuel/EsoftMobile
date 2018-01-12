@@ -13,6 +13,7 @@ import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { ChangeOtpPage } from '../change-otp/change-otp';
+import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 
 /**
  * Generated class for the LoginPage page.
@@ -45,7 +46,7 @@ export class LoginPage implements OnInit {
   ngOnInit(): void {
     this.userLoginFormGroup = this.formBuilder.group({
       MemberNo: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
-      Pin: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
+      Pin: ['', Validators.compose([Validators.required,Validators.maxLength(4),Validators.minLength(4), Validators.pattern('[0-9]{4,4}')])],
       DeviceInfo: new FormControl('1234', Validators.compose([Validators.required])),
     })
   }
@@ -99,5 +100,8 @@ export class LoginPage implements OnInit {
       position: 'middle'
     });
     toast.present();
+  }
+  gotToForgotPasswordPage(){
+    this.navCtrl.push(ForgotPasswordPage);
   }
 }

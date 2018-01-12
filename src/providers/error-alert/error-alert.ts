@@ -20,7 +20,6 @@ export class ErrorAlertProvider {
   }
 
   private buildErrorMessage(alertMessage: string,title:string) {
-    console.log("alert Message is ", alertMessage);
     let alert = this.alertCtrl.create({
       title: title,
       message: alertMessage,

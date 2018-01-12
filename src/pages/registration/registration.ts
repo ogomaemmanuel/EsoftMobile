@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountsDetailsServiceProvider } from '../../providers/acconts-details-service/acconts-details-service';
 import { LoginPage } from '../login/login';
 import { Device } from '@ionic-native/device';
+import { ErrorAlertProvider } from '../../providers/error-alert/error-alert';
 
 
 /**
@@ -33,7 +34,8 @@ export class RegistrationPage implements OnInit {
     public formBuilder: FormBuilder,
     public toastCtrl: ToastController,
     private alertCtrl: AlertController,
-    private device:Device,
+    private errorAlertProvider: ErrorAlertProvider,
+    private device: Device,
   ) {
 
   }
@@ -61,41 +63,36 @@ export class RegistrationPage implements OnInit {
   }
   submit() {
     this.submitAttempt = true;
-    let registrationDetails=this.registrationModelFormGroup.value;
-    registrationDetails.DeviceInfo= this.device.uuid;
+    let registrationDetails = this.registrationModelFormGroup.value;
+    registrationDetails.DeviceInfo = this.device.uuid;
     this.accountsDetailsServiceProvider.registerNewUser(registrationDetails)
       .subscribe(resp => {
         if (resp.ok) {
-          console.log("The ok response message is ", resp.json());
-          let toast = this.toastCtrl.create({
+          let alert = this.alertCtrl.create({
             message: resp.json(),
-            duration: 3000,
-            position: 'middle'
+            mode: 'md',
+            buttons: [
+              {
+                text: 'ok',
+                role: 'cancel',
+                handler: () => {
+                  this.navCtrl.setRoot(LoginPage);
+                }
+              },
+            ]
           });
-          toast.present();
-          this.navCtrl.setRoot(LoginPage)
+          alert.present();
         }
       }, error => {
         if (error.status == 400) {
 
           let erroMessages = JSON.parse(error._body);
-          this.alertErrorMessage(erroMessages);
+          this.errorAlertProvider.alertError(erroMessages, "Registration Error");
         }
         else {
-          this.alertErrorMessage("There was an error in Registration,retry or visit your nearest branch for help");
+          this.errorAlertProvider.alertError("There was an error in Registration,retry or visit your nearest branch for help", "Registration Error");
         }
-        
+
       });
-  }
-
-  alertErrorMessage(alertMessage: string) {
-    console.log("alert Message is ", alertMessage);
-    let alert = this.alertCtrl.create({
-      title: "Registration Error",
-      message: alertMessage,
-      mode: 'md'
-    });
-    alert.present();
-
   }
 }
