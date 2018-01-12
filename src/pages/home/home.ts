@@ -59,6 +59,7 @@ export class HomePage implements OnInit {
         this.events.publish("userLogedIn", this.customer);
         loader.dismiss();
       });
+      this.getCompanyName();
     }
   }
 
@@ -82,6 +83,8 @@ export class HomePage implements OnInit {
 
   getCompanyName() {
     this.companyDetailsProvider.getCompanyName().subscribe(resp => {
+
+      console.log("company details are", resp.json());
       this.companyName = resp.json();
     }, error => { })
   }
