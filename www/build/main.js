@@ -769,51 +769,42 @@ var ChangeOtpPage = (function () {
     };
     ChangeOtpPage.prototype.setNewPin = function () {
         var _this = this;
-        if (this.otpForm.value["NewPin"] != this.otpForm.value["ConfirmPin"]) {
-            this.showPinError = true;
-        }
-        else {
-            var loader_1 = this.loaderCtrl.create({
-                content: "loading ...."
-            });
-            loader_1.present();
-            var pinDetails = this.otpForm.value;
-            pinDetails.userId = this.userId;
-            this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(function (resp) {
-                if (resp.ok) {
-                    loader_1.dismiss();
-                    _this.alertCtrl.create({
-                        message: "New pin has been set successfully",
-                        buttons: [{
-                                text: 'ok',
-                                handler: function () {
-                                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
-                                }
-                            }]
-                    });
-                }
-            }, function (error) {
-                loader_1.dismiss();
-                _this.errorAlertProvider.alertError(JSON.parse(error._body), "Pin Reset Error");
-            });
-        }
+        var loader = this.loaderCtrl.create({
+            content: "loading ...."
+        });
+        loader.present();
+        var pinDetails = this.otpForm.value;
+        pinDetails.userId = this.userId;
+        this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(function (resp) {
+            if (resp.ok) {
+                loader.dismiss();
+                var alert = _this.alertCtrl.create({
+                    message: "New pin has been set successfully",
+                    buttons: [{
+                            text: 'ok',
+                            handler: function () {
+                                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
+                            }
+                        }]
+                });
+                alert.present();
+            }
+        }, function (error) {
+            loader.dismiss();
+            _this.errorAlertProvider.alertError(JSON.parse(error._body), "Pin Reset Error");
+        });
     };
     return ChangeOtpPage;
 }());
 ChangeOtpPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-change-otp',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/'<!--\n  Generated template for the ChangeOtpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Reset Pin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form [formGroup]="otpForm"  (ngSubmit)="setNewPin()">\n        <ion-list>\n          <ion-item>\n            <ion-label floating>New Pin</ion-label>\n            <ion-input type="password" formControlName="NewPin"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>Re-Enter Pin</ion-label>\n            <ion-input type="password" formControlName="ConfirmPin"></ion-input>\n          </ion-item>\n          <!-- <ion-item *ngIf="NewPinConfirm.value==NewPin.value">\n              <p>Sorry, pins do not match!</p>\n          </ion-item> -->         \n        </ion-list>\n        <div>\n          <button ion-button [disabled]="!otpForm.valid" block>Update</button>\n        </div>\n      </form>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/,
+        selector: 'page-change-otp',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/'<!--\n  Generated template for the ChangeOtpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Reset Pin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form [formGroup]="otpForm"  (ngSubmit)="setNewPin()">\n        <ion-list>\n          <ion-item>\n            <ion-label floating>New Pin</ion-label>\n            <ion-input type="password" formControlName="NewPin"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>Re-Enter Pin</ion-label>\n            <ion-input maxlength="4" type="password" formControlName="ConfirmPin"></ion-input>\n          </ion-item>\n          <!-- <ion-item *ngIf="NewPinConfirm.value==NewPin.value">\n              <p>Sorry, pins do not match!</p>\n          </ion-item> -->         \n        </ion-list>\n        <div>\n          <button ion-button [disabled]="!otpForm.valid" block>Update</button>\n        </div>\n      </form>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\change-otp\change-otp.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_alert_alert_controller__["a" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__["a" /* ErrorAlertProvider */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_alert_alert_controller__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_alert_alert_controller__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__["a" /* AccountsDetailsServiceProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__["a" /* ErrorAlertProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__["a" /* ErrorAlertProvider */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */]) === "function" && _g || Object])
 ], ChangeOtpPage);
 
+var _a, _b, _c, _d, _e, _f, _g;
 //# sourceMappingURL=change-otp.js.map
 
 /***/ }),
@@ -1254,7 +1245,7 @@ var ChangePasswordPage = (function () {
 ChangePasswordPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-change-password',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\change-password\change-password.html"*/'<!--\n  Generated template for the ChangeOtpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Change Pin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form [formGroup]="changePinFormGroup"  (ngSubmit)="changeOldPin()">\n        <ion-list>\n          <ion-item>\n            <ion-label floating>Current Pin</ion-label>\n            <ion-input type="password" formControlName="OldPin"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>New Pin</ion-label>\n            <ion-input type="password" formControlName="NewPin"></ion-input>\n          </ion-item>\n\n          <ion-item>\n            <ion-label floating>Confirm New Pin</ion-label>\n            <ion-input type="password" formControlName="ConfirmPin"></ion-input>\n          </ion-item>\n        </ion-list>\n        <div>\n          <button ion-button [disabled]="!changePinFormGroup.valid" block>Update</button>\n        </div>\n      </form>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\change-password\change-password.html"*/,
+        selector: 'page-change-password',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\change-password\change-password.html"*/'<!--\n  Generated template for the ChangeOtpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Change Pin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form [formGroup]="changePinFormGroup"  (ngSubmit)="changeOldPin()">\n        <ion-list>\n          <ion-item>\n            <ion-label floating>Current Pin</ion-label>\n            <ion-input maxlength="4" type="password" formControlName="OldPin"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>New Pin</ion-label>\n            <ion-input maxlength="4" type="password" formControlName="NewPin"></ion-input>\n          </ion-item>\n\n          <ion-item>\n            <ion-label floating>Confirm New Pin</ion-label>\n            <ion-input maxlength="4" type="password" formControlName="ConfirmPin"></ion-input>\n          </ion-item>\n        </ion-list>\n        <div>\n          <button ion-button [disabled]="!changePinFormGroup.valid" block>Update</button>\n        </div>\n      </form>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\change-password\change-password.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
