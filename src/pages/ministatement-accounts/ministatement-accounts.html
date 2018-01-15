@@ -2,9 +2,7 @@
   <ion-navbar>
     <ion-title> {{accountType}}</ion-title>
   </ion-navbar>
-  
 </ion-header>
-
 <ion-content>
   <ion-list>
       <button ion-item *ngFor="let accountDetail of customerAccounts" (click)="getMiniStatement(accountDetail)">
