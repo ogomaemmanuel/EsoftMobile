@@ -22,6 +22,7 @@ import { MinistatementPage } from '../ministatement/ministatement';
 export class MinistatementAccountsPage implements OnInit {
   customerAccounts: ProductsView[] = [];
   accountType: any;
+  selectedProduct:string;
   miniStatements: MiniStatement[] = []
   constructor(
     public customerProvider: CustomerProvider,
@@ -43,16 +44,17 @@ export class MinistatementAccountsPage implements OnInit {
     console.log('ionViewDidLoad MinistatementAccountsPage');
   }
 
-  getMiniStatement(accountNo: any) {
-    console.log("the account", accountNo);
+  getMiniStatement(accountDetail: any) {
+    console.log("the account details are", accountDetail);
+    this.selectedProduct=accountDetail.productName;
     if (this.accountType === "Loans Accounts") {
-      this.getLoansMiniStatement(accountNo);
+      this.getLoansMiniStatement(accountDetail.accountNo);
     }
     if (this.accountType === "Savings Accounts") {
-      this.getSavingMinistatentAccounts(accountNo);
+      this.getSavingMinistatentAccounts(accountDetail.accountNo);
     }
     if (this.accountType === "Shares Accounts") {
-      this.getSharesMiniStatement(accountNo)
+      this.getSharesMiniStatement(accountDetail.accountNo)
     }
 
   }
@@ -67,7 +69,7 @@ export class MinistatementAccountsPage implements OnInit {
         this.miniStatements = ministatementsObject;
         loader.dismiss();
         console.log("Ministatemens from api", this.miniStatements, "Accpunts");
-        this.navCtrl.push(MinistatementPage, { ministatements: this.miniStatements });
+        this.navCtrl.push(MinistatementPage, { ministatements: this.miniStatements,product:this.selectedProduct });
       })
     });
   }
@@ -82,7 +84,7 @@ export class MinistatementAccountsPage implements OnInit {
         this.miniStatements = ministatementsObject;
         loader.dismiss();
         console.log("Ministatemens from api", this.miniStatements, "Accpunts");
-        this.navCtrl.push(MinistatementPage, { ministatements: this.miniStatements });
+        this.navCtrl.push(MinistatementPage, { ministatements: this.miniStatements,product:this.selectedProduct });
       })
     });
 
@@ -99,7 +101,7 @@ export class MinistatementAccountsPage implements OnInit {
         this.miniStatements = ministatementsObject;
         loader.dismiss();
         console.log("Ministatemens from api", this.miniStatements, "Accpunts");
-        this.navCtrl.push(MinistatementPage, { ministatements: this.miniStatements });
+        this.navCtrl.push(MinistatementPage, { ministatements: this.miniStatements,product:this.selectedProduct });
       })
     });
   }

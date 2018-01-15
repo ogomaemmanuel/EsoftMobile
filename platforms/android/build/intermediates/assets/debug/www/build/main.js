@@ -209,6 +209,7 @@ var MinistatementPage = (function () {
     }
     MinistatementPage.prototype.ngOnInit = function () {
         this.ministatements = this.navParams.get("ministatements");
+        this.product = this.navParams.get("product");
         console.log("these are the statements", this.ministatements);
     };
     MinistatementPage.prototype.ionViewDidLoad = function () {
@@ -219,7 +220,7 @@ var MinistatementPage = (function () {
 MinistatementPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-ministatement',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\ministatement\ministatement.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Ministatement</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of ministatements">\n      <small>{{ item.referenceNo }}</small>\n      <p>{{ item.amount|currency:\'ksh\':true }} &nbsp;&nbsp; {{ item.transactionDate|date:\'medium\' }}</p>\n    </button>  \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\ministatement\ministatement.html"*/,
+        selector: 'page-ministatement',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\ministatement\ministatement.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title text-center>Ministatement</ion-title>\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-title text-center>{{product|titlecase}}</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of ministatements">\n      <small>{{ item.referenceNo }}</small>\n      <p>{{ item.amount|currency:\'ksh\':true }} &nbsp;&nbsp; {{ item.transactionDate|date:\'medium\' }}</p>\n    </button>  \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\ministatement\ministatement.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
 ], MinistatementPage);
@@ -276,16 +277,17 @@ var MinistatementAccountsPage = (function () {
     MinistatementAccountsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad MinistatementAccountsPage');
     };
-    MinistatementAccountsPage.prototype.getMiniStatement = function (accountNo) {
-        console.log("the account", accountNo);
+    MinistatementAccountsPage.prototype.getMiniStatement = function (accountDetail) {
+        console.log("the account details are", accountDetail);
+        this.selectedProduct = accountDetail.productName;
         if (this.accountType === "Loans Accounts") {
-            this.getLoansMiniStatement(accountNo);
+            this.getLoansMiniStatement(accountDetail.accountNo);
         }
         if (this.accountType === "Savings Accounts") {
-            this.getSavingMinistatentAccounts(accountNo);
+            this.getSavingMinistatentAccounts(accountDetail.accountNo);
         }
         if (this.accountType === "Shares Accounts") {
-            this.getSharesMiniStatement(accountNo);
+            this.getSharesMiniStatement(accountDetail.accountNo);
         }
     };
     MinistatementAccountsPage.prototype.getSavingMinistatentAccounts = function (account) {
@@ -299,7 +301,7 @@ var MinistatementAccountsPage = (function () {
                 _this.miniStatements = ministatementsObject;
                 loader.dismiss();
                 console.log("Ministatemens from api", _this.miniStatements, "Accpunts");
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__["a" /* MinistatementPage */], { ministatements: _this.miniStatements });
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__["a" /* MinistatementPage */], { ministatements: _this.miniStatements, product: _this.selectedProduct });
             });
         });
     };
@@ -314,7 +316,7 @@ var MinistatementAccountsPage = (function () {
                 _this.miniStatements = ministatementsObject;
                 loader.dismiss();
                 console.log("Ministatemens from api", _this.miniStatements, "Accpunts");
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__["a" /* MinistatementPage */], { ministatements: _this.miniStatements });
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__["a" /* MinistatementPage */], { ministatements: _this.miniStatements, product: _this.selectedProduct });
             });
         });
     };
@@ -329,7 +331,7 @@ var MinistatementAccountsPage = (function () {
                 _this.miniStatements = ministatementsObject;
                 loader.dismiss();
                 console.log("Ministatemens from api", _this.miniStatements, "Accpunts");
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__["a" /* MinistatementPage */], { ministatements: _this.miniStatements });
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__ministatement_ministatement__["a" /* MinistatementPage */], { ministatements: _this.miniStatements, product: _this.selectedProduct });
             });
         });
     };
@@ -338,7 +340,7 @@ var MinistatementAccountsPage = (function () {
 MinistatementAccountsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-ministatement-accounts',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\ministatement-accounts\ministatement-accounts.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title> {{accountType}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n      <button ion-item *ngFor="let accountDetail of customerAccounts" (click)="getMiniStatement(accountDetail.accountNo)">\n        {{accountDetail.productName|trim|titlecase}}\n        <ion-note item-end>\n          {{accountDetail.accountNo|trim}}\n        </ion-note>\n      </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\ministatement-accounts\ministatement-accounts.html"*/,
+        selector: 'page-ministatement-accounts',template:/*ion-inline-start:"C:\EsoftMobile\src\pages\ministatement-accounts\ministatement-accounts.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title> {{accountType}}</ion-title>\n  </ion-navbar>\n  \n</ion-header>\n\n<ion-content>\n  <ion-list>\n      <button ion-item *ngFor="let accountDetail of customerAccounts" (click)="getMiniStatement(accountDetail)">\n        {{accountDetail.productName|trim|titlecase}}\n        <ion-note item-end>\n          {{accountDetail.accountNo|trim}}\n        </ion-note>\n      </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\EsoftMobile\src\pages\ministatement-accounts\ministatement-accounts.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__providers_ministatement_ministatement__["a" /* MinistatementProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_customer_customer__["a" /* CustomerProvider */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_customer_customer__["a" /* CustomerProvider */],
@@ -769,34 +771,30 @@ var ChangeOtpPage = (function () {
     };
     ChangeOtpPage.prototype.setNewPin = function () {
         var _this = this;
-        if (this.otpForm.value["NewPin"] != this.otpForm.value["ConfirmPin"]) {
-            this.showPinError = true;
-        }
-        else {
-            var loader_1 = this.loaderCtrl.create({
-                content: "loading ...."
-            });
-            loader_1.present();
-            var pinDetails = this.otpForm.value;
-            pinDetails.userId = this.userId;
-            this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(function (resp) {
-                if (resp.ok) {
-                    loader_1.dismiss();
-                    _this.alertCtrl.create({
-                        message: "New pin has been set successfully",
-                        buttons: [{
-                                text: 'ok',
-                                handler: function () {
-                                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
-                                }
-                            }]
-                    });
-                }
-            }, function (error) {
-                loader_1.dismiss();
-                _this.errorAlertProvider.alertError(JSON.parse(error._body), "Pin Reset Error");
-            });
-        }
+        var loader = this.loaderCtrl.create({
+            content: "loading ...."
+        });
+        loader.present();
+        var pinDetails = this.otpForm.value;
+        pinDetails.userId = this.userId;
+        this.accountsDetailsServiceProvider.ResetCustomerOtpPin(pinDetails).subscribe(function (resp) {
+            if (resp.ok) {
+                loader.dismiss();
+                var alert_1 = _this.alertCtrl.create({
+                    message: "New pin has been set successfully",
+                    buttons: [{
+                            text: 'ok',
+                            handler: function () {
+                                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
+                            }
+                        }]
+                });
+                alert_1.present();
+            }
+        }, function (error) {
+            loader.dismiss();
+            _this.errorAlertProvider.alertError(JSON.parse(error._body), "Pin Reset Error");
+        });
     };
     return ChangeOtpPage;
 }());

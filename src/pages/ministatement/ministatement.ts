@@ -15,10 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MinistatementPage implements OnInit {
   public ministatements: any=[];
+  public product:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   ngOnInit(): void {
     this.ministatements = this.navParams.get("ministatements");
+    this.product= this.navParams.get("product");
     console.log("these are the statements", this.ministatements);
   }
   ionViewDidLoad() {
