@@ -72,7 +72,7 @@ export class ChangeOtpPage implements OnInit {
         }
       }, error => {
         loader.dismiss();
-        this.errorAlertProvider.alertError("", "");
+        this.errorAlertProvider.alertError(JSON.parse(error._body),"Pin Reset Error");
       })
     }
 
