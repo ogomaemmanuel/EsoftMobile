@@ -14,6 +14,7 @@ import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { ChangeOtpPage } from '../change-otp/change-otp';
 import { ForgotPasswordPage } from '../forgot-password/forgot-password';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the LoginPage page.
@@ -31,6 +32,7 @@ import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 export class LoginPage implements OnInit {
   public telephone: string;
   public pin: string;
+  public memberNoStored: boolean;
   public userLoginFormGroup: FormGroup;
   constructor(public menuCtrl: MenuController,
     public userAuthProvider: UserAuthProvider,
@@ -39,7 +41,8 @@ export class LoginPage implements OnInit {
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private errorAlertProvider: ErrorAlertProvider,
-    private  loadingCtrl: LoadingController,
+    private loadingCtrl: LoadingController,
+    private storage: Storage,
     public alertCtrl: AlertController) {
     // this.menuCtrl.enabled=false;
   }
@@ -47,9 +50,10 @@ export class LoginPage implements OnInit {
   ngOnInit(): void {
     this.userLoginFormGroup = this.formBuilder.group({
       MemberNo: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
-      Pin: ['', Validators.compose([Validators.required,Validators.maxLength(4),Validators.minLength(4), Validators.pattern('[0-9]{4,4}')])],
-      DeviceInfo: new FormControl('1234', Validators.compose([Validators.required])),
+      Pin: ['', Validators.compose([Validators.required, Validators.maxLength(4), Validators.minLength(4), Validators.pattern('[0-9]{4,4}')])],
+      DeviceInfo: new FormControl('', Validators.compose([Validators.required])),
     })
+    //this.getUserMemberNo();
   }
 
   ionViewDidLoad() {
@@ -66,19 +70,21 @@ export class LoginPage implements OnInit {
     this.menuCtrl.swipeEnable(false)
   }
   authenticate() {
-    let mobileNo = this.userLoginFormGroup.value['MemberNo'];
+    let MemberNo = this.userLoginFormGroup.value['MemberNo'];
     let pin = this.userLoginFormGroup.value['Pin']
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
     });
     loader.present();
-    this.userAuthProvider.authenticateUser(pin, mobileNo).subscribe(loginStatus => {
+    this.userAuthProvider.authenticateUser(pin, MemberNo).subscribe(loginStatus => {
       if (loginStatus.ok) {
         loader.dismiss();
-       if (loginStatus.json().user.otPwrd)
+        if (loginStatus.json().user.otPwrd)
           this.navCtrl.push(ChangeOtpPage, { userId: loginStatus.json().user.tbl_CustomerId });
-        else
+        else {
+          this.storeUserMemberNo(MemberNo);
           this.navCtrl.setRoot(HomePage, { userId: loginStatus.json().user.tbl_CustomerId });
+        }
       }
     }, error => {
       loader.dismiss();
@@ -106,7 +112,27 @@ export class LoginPage implements OnInit {
     });
     toast.present();
   }
-  gotToForgotPasswordPage(){
+  gotToForgotPasswordPage() {
     this.navCtrl.push(ForgotPasswordPage);
+  }
+
+  storeUserMemberNo(memberNo: string) {
+
+    this.storage.set("MemberNo", memberNo);
+
+
+  }
+
+  getUserMemberNo() {
+    this.storage.get("MemberNo").then(mem => {
+      this.memberNoStored = true;
+
+      return mem;
+     
+     
+    }).catch(err=>{
+      return '';
+    });
+
   }
 }

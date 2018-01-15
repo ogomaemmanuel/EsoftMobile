@@ -6,6 +6,7 @@ import { Events } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 import { HomePage } from "../../pages/home/home";
 import { EndPointHostProvider } from '../end-point-host/end-point-host';
+import { Device } from '@ionic-native/device';
 
 /*
   Generated class for the UserAuthProvider provider.
@@ -17,13 +18,15 @@ import { UserAuthProvider } from '../providers/user-auth/user-auth';
 @Injectable()
 export class UserAuthProvider extends EndPointHostProvider implements OnInit {
   userId: string = "7e8a41b8-cd73-4cee-956a-4ae693b8cf06";
-  private endpoint:string;
+  private endpoint: string;
   constructor(
     public events: Events,
-    public http: Http, public navController: NavController,
+    public http: Http,
+    public navController: NavController,
+    private device:Device,
     public alertCtrl: AlertController) {
-      super();
-      this.endpoint= this.getHost();
+    super();
+    this.endpoint = this.getHost();
     console.log('Hello UserAuthProvider Provider');
   }
 
@@ -31,7 +34,8 @@ export class UserAuthProvider extends EndPointHostProvider implements OnInit {
 
   }
   public authenticateUser(pin: string, telephone: string) {
-    return this.http.get(this.endpoint+"customers/login?MobileNo=" +
-      telephone + "&Pin=" + pin).map(res => res);
+    console.log("Logigged in device id is",this.device.uuid);
+    return this.http.get(this.endpoint + "customers/login?MobileNo=" +
+      telephone + "&Pin=" + pin+"&DeviceInfo="+this.device.uuid).map(res => res);
   }
 }

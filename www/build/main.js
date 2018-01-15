@@ -725,7 +725,7 @@ RegistrationPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_alert_alert_controller__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_alert_alert_controller__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -826,7 +826,7 @@ ChangeOtpPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_error_alert_error_alert__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_alert_alert_controller__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_alert_alert_controller__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_login__ = __webpack_require__(34);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1813,7 +1813,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1879,7 +1879,7 @@ CustomerProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__commonFunctions_TrimPipe__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_acconts_details_service_acconts_details_service__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_balances_details_balances_details__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_ministatement_ministatement__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ministatement_menu_ministatement_menu__ = __webpack_require__(120);
@@ -2388,7 +2388,7 @@ TrimPipe = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__end_point_host_end_point_host__ = __webpack_require__(29);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2486,6 +2486,7 @@ AccountsDetailsServiceProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__change_otp_change_otp__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__forgot_password_forgot_password__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2509,6 +2510,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -2516,7 +2518,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var LoginPage = (function () {
-    function LoginPage(menuCtrl, userAuthProvider, navCtrl, toastCtrl, navParams, formBuilder, errorAlertProvider, loadingCtrl, alertCtrl) {
+    function LoginPage(menuCtrl, userAuthProvider, navCtrl, toastCtrl, navParams, formBuilder, errorAlertProvider, loadingCtrl, storage, alertCtrl) {
         this.menuCtrl = menuCtrl;
         this.userAuthProvider = userAuthProvider;
         this.navCtrl = navCtrl;
@@ -2525,15 +2527,17 @@ var LoginPage = (function () {
         this.formBuilder = formBuilder;
         this.errorAlertProvider = errorAlertProvider;
         this.loadingCtrl = loadingCtrl;
+        this.storage = storage;
         this.alertCtrl = alertCtrl;
         // this.menuCtrl.enabled=false;
     }
     LoginPage.prototype.ngOnInit = function () {
         this.userLoginFormGroup = this.formBuilder.group({
-            MemberNo: ['', __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].pattern('[0-9]{1,}')])],
+            MemberNo: [this.getUserMemberNo(), __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].pattern('[0-9]{1,}')])],
             Pin: ['', __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].maxLength(4), __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].minLength(4), __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].pattern('[0-9]{4,4}')])],
             DeviceInfo: new __WEBPACK_IMPORTED_MODULE_7__angular_forms__["b" /* FormControl */]('1234', __WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_7__angular_forms__["g" /* Validators */].required])),
         });
+        //this.getUserMemberNo();
     };
     LoginPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad LoginPage');
@@ -2547,19 +2551,21 @@ var LoginPage = (function () {
     };
     LoginPage.prototype.authenticate = function () {
         var _this = this;
-        var mobileNo = this.userLoginFormGroup.value['MemberNo'];
+        var MemberNo = this.userLoginFormGroup.value['MemberNo'];
         var pin = this.userLoginFormGroup.value['Pin'];
         var loader = this.loadingCtrl.create({
             content: "Please wait...",
         });
         loader.present();
-        this.userAuthProvider.authenticateUser(pin, mobileNo).subscribe(function (loginStatus) {
+        this.userAuthProvider.authenticateUser(pin, MemberNo).subscribe(function (loginStatus) {
             if (loginStatus.ok) {
                 loader.dismiss();
                 if (loginStatus.json().user.otPwrd)
                     _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__change_otp_change_otp__["a" /* ChangeOtpPage */], { userId: loginStatus.json().user.tbl_CustomerId });
-                else
+                else {
+                    _this.storeUserMemberNo(MemberNo);
                     _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__home_home__["a" /* HomePage */], { userId: loginStatus.json().user.tbl_CustomerId });
+                }
             }
         }, function (error) {
             loader.dismiss();
@@ -2588,6 +2594,18 @@ var LoginPage = (function () {
     LoginPage.prototype.gotToForgotPasswordPage = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__forgot_password_forgot_password__["a" /* ForgotPasswordPage */]);
     };
+    LoginPage.prototype.storeUserMemberNo = function (memberNo) {
+        this.storage.set("MemberNo", memberNo);
+    };
+    LoginPage.prototype.getUserMemberNo = function () {
+        var _this = this;
+        this.storage.get("MemberNo").then(function (mem) {
+            _this.memberNoStored = true;
+            return mem;
+        }).catch(function (err) {
+            return '';
+        });
+    };
     return LoginPage;
 }());
 LoginPage = __decorate([
@@ -2604,6 +2622,7 @@ LoginPage = __decorate([
         __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */],
         __WEBPACK_IMPORTED_MODULE_6__providers_error_alert_error_alert__["a" /* ErrorAlertProvider */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["b" /* Storage */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
 ], LoginPage);
 
@@ -2751,7 +2770,7 @@ MinistatementProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__balaces_balaces__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_customer_detailsservice_customer_detailsservice__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ministatement_menu_ministatement_menu__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__atm_cards_atm_cards__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_popover_popover_controller__ = __webpack_require__(91);
