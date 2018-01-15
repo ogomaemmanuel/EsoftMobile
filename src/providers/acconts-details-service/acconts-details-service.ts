@@ -4,10 +4,11 @@ import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
 import { AccountDetail } from '../../models/accountDetails';
 import { EndPointHostProvider } from '../end-point-host/end-point-host';
+import { Device } from '@ionic-native/device';
 @Injectable()
 export class AccountsDetailsServiceProvider extends EndPointHostProvider {
   private endPoint: string = "customers/";
-  constructor(public storage: Storage, public http: Http) {
+  constructor(public storage: Storage, public http: Http, private device: Device) {
     super();
     this.endPoint = this.getHost() + this.endPoint
   }
@@ -37,6 +38,7 @@ export class AccountsDetailsServiceProvider extends EndPointHostProvider {
   }
   public SubmitForgotPasswordDetails(pidResetDetails: any) {
     var headers = new Headers();
+    pidResetDetails.DeviceInfo=this.device.uuid||"ccb87f40a87ee5cf";
     headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
     return this.http.post(this.endPoint + "forgot-pass", pidResetDetails, options);

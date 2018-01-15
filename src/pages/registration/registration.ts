@@ -69,7 +69,7 @@ export class RegistrationPage implements OnInit {
     loader.present();
     this.submitAttempt = true;
     let registrationDetails = this.registrationModelFormGroup.value;
-    registrationDetails.DeviceInfo = this.device.uuid;
+    registrationDetails.DeviceInfo = this.device.uuid||"ccb87f40a87ee5cf";
     this.accountsDetailsServiceProvider.registerNewUser(registrationDetails)
       .subscribe(resp => {
         loader.dismiss();
