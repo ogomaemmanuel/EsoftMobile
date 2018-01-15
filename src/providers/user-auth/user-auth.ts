@@ -23,7 +23,7 @@ export class UserAuthProvider extends EndPointHostProvider implements OnInit {
     public events: Events,
     public http: Http,
     public navController: NavController,
-    private device:Device,
+    private device: Device,
     public alertCtrl: AlertController) {
     super();
     this.endpoint = this.getHost();
@@ -34,8 +34,8 @@ export class UserAuthProvider extends EndPointHostProvider implements OnInit {
 
   }
   public authenticateUser(pin: string, telephone: string) {
-    console.log("Logigged in device id is",this.device.uuid);
+    let deviceUuid = this.device.uuid || "ccb87f40a87ee5cf";
     return this.http.get(this.endpoint + "customers/login?MobileNo=" +
-      telephone + "&Pin=" + pin+"&DeviceInfo="+this.device.uuid).map(res => res);
+      telephone + "&Pin=" + pin + "&DeviceInfo=" + deviceUuid).map(res => res);
   }
 }

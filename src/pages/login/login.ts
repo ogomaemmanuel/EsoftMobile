@@ -51,7 +51,7 @@ export class LoginPage implements OnInit {
     this.userLoginFormGroup = this.formBuilder.group({
       MemberNo: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]{1,}')])],
       Pin: ['', Validators.compose([Validators.required, Validators.maxLength(4), Validators.minLength(4), Validators.pattern('[0-9]{4,4}')])],
-      DeviceInfo: new FormControl('', Validators.compose([Validators.required])),
+     // DeviceInfo: new FormControl('', Validators.compose([Validators.required])),
     })
     //this.getUserMemberNo();
   }
