@@ -8,6 +8,7 @@ import { HomePage } from '../home/home';
 import { DeviceInfoProvider } from '../../providers/device-info/device-info';
 import { CustomerProvider } from '../../providers/customer/customer';
 import { GreatorThanZeroValidator } from '../../commonFunctions/GreatorThanZeroValidator';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 
 /**
  * Generated class for the DepositTransactionPage page.
@@ -35,9 +36,11 @@ export class DepositTransactionPage implements OnInit {
     public alertCtrl: AlertController,
     public deviceInfoProvider: DeviceInfoProvider,
     public customerProvider: CustomerProvider,
+    private loadingCtrl: LoadingController,
   ) {
   }
   ngOnInit(): void {
+
     this.accountDetails = this.navParams.get('accountDetails');
     this.customer = this.navParams.get("customer");
     this.trxTitle = this.navParams.get("accountCategory");
@@ -48,7 +51,7 @@ export class DepositTransactionPage implements OnInit {
     };
     this.depositFormGroup = this.formBuilder.group({
       ProductCode: ['', Validators.compose([Validators.required])],
-      TrxAmount: ['0.00', Validators.compose([GreatorThanZeroValidator.greatorThanZero,Validators.pattern('^\\d+(\\.(\\d{1,2})){0,1}$|^\\d{1,3}(,\\d{3})*(\\.\\d{1,2})*$'), Validators.required])],
+      TrxAmount: ['0.00', Validators.compose([GreatorThanZeroValidator.greatorThanZero, Validators.pattern('^\\d+(\\.(\\d{1,2})){0,1}$|^\\d{1,3}(,\\d{3})*(\\.\\d{1,2})*$'), Validators.required])],
       TellerLoginCode: [''],
     });
   }
@@ -61,10 +64,17 @@ export class DepositTransactionPage implements OnInit {
       this.depositTrx.CustomerNo = this.navParams.get("customer").customerNo;
       this.depositTrx.DeviceInfo = this.deviceInfoProvider.getDevice();
       this.depositTrx.TellerLoginCode = user.loginCode;
+      let loader = this.loadingCtrl.create({
+        content:"processing...."
+      })
+      loader.present();
       this.depositTransactionProvider.depositCash(this.depositTrx).subscribe(res => {
         if (res.ok) {
+          loader.dismiss();
           this.showRedirectDialog();
         }
+      }, error => {
+        loader.dismiss();
       });
     })
   }
@@ -92,20 +102,20 @@ export class DepositTransactionPage implements OnInit {
     alert.present();
   }
 
-  formatToCurrency(){
-  let oldTrxAmount= this.depositFormGroup.controls["TrxAmount"].value;
-  oldTrxAmount=oldTrxAmount
+  formatToCurrency() {
+    let oldTrxAmount = this.depositFormGroup.controls["TrxAmount"].value;
+    oldTrxAmount = oldTrxAmount
 
-  var formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: '',
-    minimumFractionDigits: 2,
-    // the default value for minimumFractionDigits depends on the currency
-    // and is usually already 2
-  });
-  console.log("formated amount is ",formatter.format(oldTrxAmount));
-  this.depositFormGroup.controls["TrxAmount"].setValue(formatter.format(oldTrxAmount));
-  this.depositFormGroup.controls["TrxAmount"].updateValueAndValidity();
+    var formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: '',
+      minimumFractionDigits: 2,
+      // the default value for minimumFractionDigits depends on the currency
+      // and is usually already 2
+    });
+    console.log("formated amount is ", formatter.format(oldTrxAmount));
+    this.depositFormGroup.controls["TrxAmount"].setValue(formatter.format(oldTrxAmount));
+    this.depositFormGroup.controls["TrxAmount"].updateValueAndValidity();
 
 
   }
