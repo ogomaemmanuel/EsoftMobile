@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AtmCardsProvider } from '../../providers/atm-cards/atm-cards';
 import { CustomerProvider } from '../../providers/customer/customer';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 
 /**
  * Generated class for the AtmCardsPage page.
@@ -22,6 +23,7 @@ export class AtmCardsPage implements OnInit {
   constructor(public customerProvider: CustomerProvider,
     public atmCardsProvider: AtmCardsProvider,
     public navCtrl: NavController,
+    private alertCtrl: AlertController,
     public navParams: NavParams) {
   }
   ngOnInit(): void {
@@ -45,9 +47,39 @@ export class AtmCardsPage implements OnInit {
       this.atmCardsProvider.blockAtmCard(atmCardId, userId).subscribe(result => {
         if (result) {
           this.atmCards[cardIndex].enabled = 0;
+          this.showSuccessMessage();
         }
       })
     });
 
+  }
+
+  confirmBlockAtm(atmCardId: string, cardIndex: number) {
+    let alert = this.alertCtrl.create({
+      message: "Do you want to block this Atm card?",
+      buttons: [{
+        text: "Yes",
+        handler: () => {
+          this.blockAtmCard(atmCardId, cardIndex);
+        }
+      },
+      {
+        text: "No",
+        handler: () => {
+
+        }
+      }
+
+      ]
+    });
+    alert.present();
+  }
+
+  showSuccessMessage() {
+    let alert = this.alertCtrl.create({
+      message: "Atm successfully blocked",
+      buttons: ["Ok"]
+    })
+    alert.present();
   }
 }

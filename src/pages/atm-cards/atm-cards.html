@@ -24,7 +24,7 @@
         </ion-card-title>
         <ion-item>
             <ion-label style="font-size: 15px; text-align:left;">{{atmCard.enabled===1?"Block Card:":"Atm Card Blocked"}}</ion-label>
-            <ion-toggle toggle-ios-background-color-on disabled="{{atmCard.enabled!==1}}" checked="{{atmCard.enabled===1}}" (ionChange)="blockAtmCard(atmCard.tbl_LinkedAtmCardsID,idx)"></ion-toggle>
+            <ion-toggle toggle-ios-background-color-on disabled="{{atmCard.enabled!==1}}" checked="{{atmCard.enabled===1}}" (ionChange)="confirmBlockAtm(atmCard.tbl_LinkedAtmCardsID,idx)"></ion-toggle>
         </ion-item>
         <ion-item>
             <ion-label style="font-size: 15px; text-align:left;">Card Number</ion-label>
