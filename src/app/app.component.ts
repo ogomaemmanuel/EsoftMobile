@@ -87,7 +87,7 @@ export class MyApp {
 
   openPage(pageSetting) {
     this.menuCtrl.close();
-    if (pageSetting.page == LoginPage || pageSetting.page == LoginPage) {
+    if (pageSetting.page == HomePage|| pageSetting.page == LoginPage) {
       this.nav.setRoot(pageSetting.page);
     }
     else if (pageSetting.page == DepositMainPage) {

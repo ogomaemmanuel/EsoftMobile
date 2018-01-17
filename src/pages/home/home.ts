@@ -26,7 +26,7 @@ export interface PageInterface {
 export class HomePage implements OnInit {
 
   private customer: Customer;
-  public companyName: string="";
+  public companyName: string = "";
   constructor(public menuCtrl: MenuController,
     public storage: Storage,
     public loadingCtrl: LoadingController,
@@ -59,10 +59,12 @@ export class HomePage implements OnInit {
         this.events.publish("userLogedIn", this.customer);
         //loader.dismiss();
       });
-      this.getCompanyName();
+
     }
   }
-
+  ionViewDidLoad() {
+    this.getCompanyName();
+  }
   goToBalance() {
     this.navCtrl.push(BalacesPage);
 
@@ -82,10 +84,22 @@ export class HomePage implements OnInit {
   }
 
   getCompanyName() {
-    this.companyDetailsProvider.getCompanyName().subscribe(resp => {
+    this.storage.get("companyName").then(companyName => {
+      if (companyName != undefined) {
+        this.companyName = companyName;
+      }
+      else {
+        this.companyDetailsProvider.getCompanyName().subscribe(resp => {
+          this.companyName = resp.json();
+          this.storage.set("companyName", resp.json());
+        }, error => { })
+      }
+    }).catch(errr => {
+      this.companyDetailsProvider.getCompanyName().subscribe(resp => {
+        this.companyName = resp.json();
+        this.storage.set("companyName", resp.json());
+      }, error => { })
+    })
 
-      console.log("company details are", resp.json());
-      this.companyName = resp.json();
-    }, error => { })
   }
 }

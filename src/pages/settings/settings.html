@@ -15,10 +15,12 @@
         <ion-label>Deactivate Account</ion-label>
         <ion-toggle toggle-ios-background-color-on checked="false"(ionChange)="showDeactivatePrompt()"></ion-toggle>
       </ion-item>
-      <ion-item>
-      <button ion-item (click)="OpenChangePasswordPage()">
-          Reset Pin
-        </button>
+      <ion-item (click)="OpenChangePasswordPage()">
+          <ion-label> Reset Pin</ion-label>
+     <!--  <button class="primary" block (click)="OpenChangePasswordPage()">
+
+         
+        </button> -->
       </ion-item>
       </ion-list>
 </ion-content>
